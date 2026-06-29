@@ -18,6 +18,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
 }
 
 body {
@@ -26,6 +27,7 @@ body {
   background: var(--usf-white);
   color: var(--usf-text);
   font-feature-settings: 'ss01', 'ss02', 'cv11';
+  overflow-x: clip;
 }
 
 ::selection {
@@ -51,7 +53,11 @@ body {
 
 @layer components {
   .container-usf {
-    @apply mx-auto w-full max-w-[1280px] px-6 md:px-10 lg:px-14;
+    @apply mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-10 lg:px-14;
+  }
+
+  .section-pad {
+    @apply py-16 sm:py-20 md:py-24 lg:py-32;
   }
 
   .eyebrow {
@@ -73,15 +79,15 @@ body {
   }
 
   .display-h1 {
-    @apply font-display text-[44px] leading-[1.05] tracking-[-0.02em] sm:text-[56px] md:text-[68px] lg:text-[76px];
+    @apply font-display text-[36px] leading-[1.05] tracking-[-0.02em] sm:text-[48px] md:text-[68px] lg:text-[76px];
   }
 
   .display-h2 {
-    @apply font-display text-[34px] leading-[1.08] tracking-[-0.02em] sm:text-[42px] md:text-[48px] lg:text-[52px];
+    @apply font-display text-[28px] leading-[1.1] tracking-[-0.02em] sm:text-[38px] md:text-[48px] lg:text-[52px];
   }
 
   .display-h3 {
-    @apply font-display text-[26px] leading-[1.15] tracking-[-0.015em] sm:text-[30px] md:text-[34px];
+    @apply font-display text-[22px] leading-[1.15] tracking-[-0.015em] sm:text-[26px] md:text-[30px] lg:text-[34px];
   }
 
   .lead {
@@ -89,7 +95,7 @@ body {
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-[14px] text-[13.5px] font-semibold uppercase tracking-[0.12em] transition-all duration-300 ease-out;
+    @apply inline-flex w-full items-center justify-center gap-2 px-5 py-3 text-[12.5px] font-semibold uppercase tracking-[0.12em] transition-all duration-300 ease-out sm:w-auto sm:px-6 sm:py-[14px] sm:text-[13.5px];
   }
 
   .btn-red {
@@ -109,7 +115,7 @@ body {
   }
 
   .card-institutional {
-    @apply relative border border-usf-blue/10 bg-white p-8 transition-all duration-500 ease-out hover:border-usf-blue/30 hover:shadow-card;
+    @apply relative border border-usf-blue/10 bg-white p-5 transition-all duration-500 ease-out hover:border-usf-blue/30 hover:shadow-card sm:p-6 md:p-8;
   }
 
   .card-institutional::before {
@@ -136,6 +142,82 @@ body {
   .divider-dot {
     @apply mx-3 inline-block h-1 w-1 rounded-full bg-usf-red/70 align-middle;
   }
+
+  .marquee-track {
+    animation: usf-marquee 28s linear infinite;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  .resourcing-timeline {
+    @apply flex flex-col gap-0 md:flex-row md:items-start md:gap-0;
+  }
+
+  .resourcing-timeline-step {
+    @apply relative flex flex-1 flex-col items-center px-3 pb-10 text-center md:pb-0;
+  }
+
+  .resourcing-timeline-step:not(:last-child)::after {
+    content: '';
+    @apply absolute left-1/2 top-5 h-full w-px -translate-x-1/2 bg-white/20 md:left-auto md:top-[18px] md:h-px md:w-full md:translate-x-0;
+  }
+
+  .resourcing-timeline-marker {
+    @apply relative z-10 mb-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/25 bg-usf-blue-dark;
+  }
+
+  .process-timeline {
+    @apply flex flex-col gap-0 overflow-visible lg:flex-row lg:items-start;
+  }
+
+  .process-timeline-step {
+    @apply relative flex flex-1 flex-col items-start pb-10 pl-12 text-left;
+    @apply lg:items-center lg:px-3 lg:pb-0 lg:pl-3 lg:text-center;
+  }
+
+  .process-timeline-step:not(:last-child)::after {
+    content: '';
+    @apply absolute left-4 top-8 z-0 w-px bg-usf-blue/15;
+    height: calc(100% - 2rem);
+    @apply lg:left-1/2 lg:top-4 lg:h-px lg:w-full lg:translate-x-0;
+  }
+
+  .process-timeline-marker {
+    @apply absolute left-0 top-0 z-10 flex h-8 w-8 flex-none items-center justify-center border border-usf-blue/20 bg-white font-display text-[13px] text-usf-red;
+    @apply lg:relative lg:mb-4;
+  }
+
+  .nav-services-menu {
+    @apply absolute left-0 top-full z-[200] min-w-[300px] border-t-[3px] border-usf-red bg-usf-blue-dark py-1 shadow-[0_16px_48px_-12px_rgba(8,30,64,0.55)];
+  }
+
+  .nav-services-menu-link {
+    @apply block border-b border-white/10 px-4 py-3 text-[13px] font-medium normal-case leading-[1.45] tracking-normal text-white/90 transition-colors last:border-b-0 hover:bg-usf-blue hover:text-white;
+  }
+}
+
+@keyframes usf-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Subtle pulse for the federation globe's secondary network nodes. The
+   outer wrapper's opacity is driven by depth in the rAF loop; this CSS
+   pulse animates the *inner* group's opacity. SVG multiplies the two,
+   so we get a "breathing" effect that still respects front/back culling. */
+@keyframes usfNetPulse {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [style*='usfNetPulse'] { animation: none !important; }
 }
 
 /* Accessible focus rings */

@@ -1,0 +1,106 @@
+---
+description: All user-visible website content must live in src/content/site.json so the non-technical client can edit it on github.com
+alwaysApply: true
+---
+
+# Content Rule — Everything Editable Lives in `src/content/site.json`
+
+This project is owned by a **non-technical client (a doctor)** who edits the
+website by changing values in `src/content/site.json` on github.com. Cloudflare
+Pages rebuilds and deploys automatically.
+
+**Therefore: never hard-code user-visible text in components.** Always route it
+through `src/content/site.json`.
+
+## What this means in practice
+
+When the user (or I) adds, edits, or restructures **anything visible on the
+page** — headlines, paragraphs, button labels, list items, eyebrow text,
+captions, contact details, leader bios, footer links, the page `<title>` and
+meta description, etc. — the copy goes into `src/content/site.json` first, and
+the component reads it from there.
+
+This applies to:
+
+- New sections / cards / list items I add
+- Tweaks to existing copy (typo fixes, rewording)
+- Anything pasted in from the client (a new bio, a new headline, etc.)
+- aria-labels and button text that the client might reasonably want to change
+- The page title and meta description (synced via `vite.config.js`'s
+  `transformIndexHtml` and a runtime `useEffect` in `App.jsx`)
+
+## How to do it correctly
+
+### ✅ Good — copy in JSON, component reads it
+
+```json
+// src/content/site.json
+"hero": {
+  "headline": "Building Global Synergy",
+  "ctaPrimary": "Become a Member"
+}
+```
+
+```jsx
+// src/components/Hero.jsx
+import site from '../content/site.json';
+const hero = site.hero;
+
+<h1>{hero.headline}</h1>
+<a href="#membership" className="btn-red">{hero.ctaPrimary}</a>
+```
+
+### ❌ Bad — text hard-coded inside JSX
+
+```jsx
+<h1>Building Global Synergy</h1>
+<a href="#membership" className="btn-red">Become a Member</a>
+```
+
+### Lists of cards / items
+
+Items belong in an array with a stable `id` field. Icons stay in code, mapped
+by `id`:
+
+```json
+"services": {
+  "items": [
+    { "id": "standards", "title": "Standards & Compliance", "summary": "…" }
+  ]
+}
+```
+
+```jsx
+const ICON_BY_ID = { standards: Scale, certification: BadgeCheck };
+const services = site.services.items.map((s) => ({
+  ...s,
+  icon: ICON_BY_ID[s.id] || Scale,
+}));
+```
+
+The doctor edits titles, summaries, and item lists freely. New items with an
+unknown `id` fall back to a default icon — never break the build.
+
+## What stays in code
+
+Do **not** move these into JSON — they are structural or visual, not "content":
+
+- Icons (lucide-react imports), colors, fonts, animations, layout classes
+- Geographic data on the maps (country coordinates, SVG paths, continent shapes)
+- Accessibility descriptions of decorative SVG visualizations
+  (`EarthGlobe.jsx`, `WorldMap.jsx`) that are tied to the visual content
+- Component logic, refs, effects
+
+## When in doubt
+
+If you're unsure whether something is "content" or "structure," ask:
+
+> Would the doctor reasonably want to change this word without a developer?
+
+If yes → goes in `site.json`. If no → stays in code.
+
+## After adding new content keys
+
+1. Verify `npm run build` succeeds (no JSON parse errors, no missing references).
+2. Consider whether `HOW-TO-EDIT.md` needs a new entry in the orientation table
+   for a new section / field.

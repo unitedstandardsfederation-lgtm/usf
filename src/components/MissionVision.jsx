@@ -1,45 +1,25 @@
 import { motion } from 'framer-motion';
 import { Compass, Telescope } from 'lucide-react';
+import site from '../content/site.json';
 
-const ITEMS = [
-  {
-    no: 'I',
-    label: 'Mission',
-    icon: Compass,
-    title:
-      'To foster a globally connected ecosystem that promotes standards, ethics, innovation, collaboration, and mutual growth for organisations worldwide.',
-    points: [
-      'Advance international standards across regulated and emerging sectors',
-      'Convene members from industry, government, academia, and civil society',
-      'Translate principles into programmes that produce measurable impact',
-    ],
-  },
-  {
-    no: 'II',
-    label: 'Vision',
-    icon: Telescope,
-    title:
-      'To become a globally trusted federation for standards, partnerships, certification, and international development initiatives.',
-    points: [
-      'A unified framework across borders, sectors, and disciplines',
-      'A recognised seal of rigour for certification and accreditation',
-      'A long-term partner for sustainable, equitable global development',
-    ],
-  },
-];
+const ICON_BY_ID = { mission: Compass, vision: Telescope };
+
+const ITEMS = site.missionVision.items.map((item) => ({
+  ...item,
+  icon: ICON_BY_ID[item.id] || Compass,
+}));
 
 export default function MissionVision() {
   return (
-    <section className="bg-white py-24 md:py-32">
+    <section className="section-pad bg-white">
       <div className="container-usf">
         <div className="grid items-end gap-8 border-b border-usf-blue/10 pb-10 md:grid-cols-2">
           <div>
-            <span className="eyebrow">Mandate</span>
-            <h2 className="display-h2 mt-6 max-w-2xl text-usf-blue">Mission & Vision</h2>
+            <span className="eyebrow">{site.missionVision.eyebrow}</span>
+            <h2 className="display-h2 mt-6 max-w-2xl text-usf-blue">{site.missionVision.heading}</h2>
           </div>
           <p className="text-[15.5px] leading-[1.8] text-usf-muted md:text-right">
-            Two principles, codified in the USF charter, that anchor every programme, working
-            group, and partnership the Federation enters.
+            {site.missionVision.description}
           </p>
         </div>
 
@@ -53,13 +33,13 @@ export default function MissionVision() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.7, delay: idx * 0.1, ease: 'easeOut' }}
-                className={`relative bg-white p-10 md:p-12 ${
+                className={`relative bg-white p-6 sm:p-8 md:p-10 lg:p-12 ${
                   idx === 0 ? 'md:pr-14' : 'md:pl-14'
                 }`}
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <span className="font-display text-[42px] font-light leading-none text-usf-red">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span className="font-display text-[32px] font-light leading-none text-usf-red sm:text-[42px]">
                       {item.no}
                     </span>
                     <span className="text-[11px] font-semibold uppercase tracking-eyebrow text-usf-muted">
@@ -71,7 +51,7 @@ export default function MissionVision() {
                   </div>
                 </div>
 
-                <p className="mt-8 font-display text-[24px] leading-[1.4] text-usf-blue md:text-[26px]">
+                <p className="mt-6 font-display text-[20px] leading-[1.4] text-usf-blue sm:mt-8 sm:text-[24px] md:text-[26px]">
                   {item.title}
                 </p>
 

@@ -13,9 +13,24 @@ The site is designed to feel like a real, multi-decade international institution
 - **Framer Motion** for restrained, professional scroll-reveal animations
 - **Lucide React** for institutional iconography
 - **Source Serif 4** + **Inter** typography pair (editorial display + modern UI)
+- **d3-geo** + **topojson-client** + **world-atlas** for the orthographic earth visualization in the hero
 - **Custom SVG world map** with federation nodes, connection arcs, and pulse animations (no third-party map dependency)
 
 No image assets are bundled — the entire site is rendered programmatically with SVG, type, and tokens.
+
+## Content Editing (for non-developers)
+
+All copy on the homepage lives in a single file:
+
+```
+src/content/site.json
+```
+
+Editing this file changes every visible text on the site — hero, about,
+services, leadership bios, contact details, footer — without touching any
+code. A non-technical owner can edit it directly on github.com.
+
+See **[HOW-TO-EDIT.md](./HOW-TO-EDIT.md)** for a full, illustrated guide.
 
 ## Brand System
 
@@ -68,6 +83,43 @@ npm run preview
 
 The static build is emitted to `dist/`.
 
+## Deployment — Cloudflare Pages
+
+The site is built as a static SPA and deploys cleanly to Cloudflare Pages
+(free tier). Every push to `main` rebuilds and goes live automatically.
+
+### One-time setup
+
+1. Push the repository to GitHub (already done at `higleemy-gif/usf`).
+2. Sign in to <https://dash.cloudflare.com/?to=/:account/pages> and choose
+   **Create application → Pages → Connect to Git**.
+3. Select the `higleemy-gif/usf` repository and authorise Cloudflare.
+4. Configure the build:
+
+   | Setting                       | Value           |
+   | ----------------------------- | --------------- |
+   | Framework preset              | **Vite**        |
+   | Build command                 | `npm run build` |
+   | Build output directory        | `dist`          |
+   | Root directory                | `/` (default)   |
+   | Node version (env. variable)  | `NODE_VERSION=20` |
+
+5. Click **Save and Deploy**. First build takes ~1 minute.
+6. (Optional) Add the custom domain under **Custom domains**.
+
+### How rebuilds happen
+
+- Every commit on `main` triggers a production deploy.
+- Every commit on any other branch / PR triggers a preview deploy with its
+  own URL — useful for reviewing edits before merging to `main`.
+
+### What's bundled in this repo for Cloudflare
+
+- `public/_redirects` — SPA fallback so deep links resolve to `index.html`.
+- `public/_headers` — caching strategy: hashed assets cached for a year,
+  HTML revalidated every request, plus baseline security headers.
+- `package.json → engines.node` — Node 18+ pin.
+
 ## Project Layout
 
 ```
@@ -75,10 +127,13 @@ src/
   App.jsx                # Section composition
   index.css              # Tailwind layers + USF component classes
   main.jsx               # React root
+  content/
+    site.json            # ← All editable copy lives here (see HOW-TO-EDIT.md)
   components/
     Navbar.jsx
     Hero.jsx
-    WorldMap.jsx         # Custom SVG dotted world map (used in Hero + Global Presence)
+    EarthGlobe.jsx       # Orthographic d3-geo earth (hero background)
+    WorldMap.jsx         # Custom SVG dotted world map (Global Presence)
     GlobalStats.jsx
     Ecosystem.jsx
     About.jsx
@@ -93,9 +148,14 @@ src/
     Membership.jsx
     FinalCTA.jsx
     Footer.jsx
+public/
+  usf-logo.png
+  _redirects             # Cloudflare Pages SPA fallback
+  _headers               # Cloudflare Pages caching + security headers
 tailwind.config.js       # USF color tokens + typography + animations
 vite.config.js
 index.html               # Google Fonts (Source Serif 4 + Inter)
+HOW-TO-EDIT.md           # Non-technical content editing guide
 ```
 
 ## Design Principles Applied

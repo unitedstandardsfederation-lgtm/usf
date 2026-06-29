@@ -1,0 +1,20 @@
+# Long-cache fingerprinted assets emitted by Vite (foo.[hash].js / .css).
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Static images and the logo should be cached but revalidated.
+/logo/*
+  Cache-Control: public, max-age=86400, must-revalidate
+
+# HTML must always revalidate so content edits go live immediately after rebuild.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Security headers
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()

@@ -1,18 +1,36 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Building2, GraduationCap, Heart, Landmark, Cpu, Globe } from 'lucide-react';
+import site from '../content/site.json';
 
-const NODES = [
-  { id: 'gov', label: 'Governments', icon: Landmark, x: 50, y: 18 },
-  { id: 'ind', label: 'Industries', icon: Building2, x: 88, y: 38 },
-  { id: 'aca', label: 'Universities', icon: GraduationCap, x: 80, y: 80 },
-  { id: 'ngo', label: 'NGOs', icon: Heart, x: 36, y: 88 },
-  { id: 'tech', label: 'Technology', icon: Cpu, x: 12, y: 60 },
-  { id: 'dev', label: 'Development Partners', icon: Globe, x: 18, y: 22 },
-];
+const ICON_BY_ID = {
+  gov: Landmark,
+  ind: Building2,
+  aca: GraduationCap,
+  ngo: Heart,
+  tech: Cpu,
+  dev: Globe,
+};
+
+/** Even placement on a ring — 60° apart, first node at 12 o'clock. */
+const RING = { cx: 50, cy: 50, r: 41 };
+
+function ringPosition(index, total) {
+  const angle = -Math.PI / 2 + (index * 2 * Math.PI) / total;
+  return {
+    x: RING.cx + RING.r * Math.cos(angle),
+    y: RING.cy + RING.r * Math.sin(angle),
+  };
+}
+
+const NODES = site.consortium.nodes.map((n, i) => ({
+  ...n,
+  icon: ICON_BY_ID[n.id] || Landmark,
+  ...ringPosition(i, site.consortium.nodes.length),
+}));
 
 export default function GlobalConsortium() {
   return (
-    <section id="consortium" className="relative overflow-hidden bg-usf-blue-dark py-24 text-white md:py-32">
+    <section id="consortium" className="section-pad relative overflow-hidden bg-usf-blue-dark text-white">
       <div
         className="absolute inset-0 opacity-[0.08]"
         style={{
@@ -32,21 +50,14 @@ export default function GlobalConsortium() {
       <div className="container-usf relative">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
-            <span className="eyebrow-light">Global Consortium</span>
-            <h2 className="display-h2 mt-6 text-white">Building Global Partnerships</h2>
+            <span className="eyebrow-light">{site.consortium.eyebrow}</span>
+            <h2 className="display-h2 mt-6 text-white">{site.consortium.heading}</h2>
             <p className="mt-7 text-[16.5px] leading-[1.8] text-white/75">
-              USF facilitates collaboration among governments, industries, universities, NGOs,
-              technology organisations, and development partners to create sustainable impact and
-              international growth.
+              {site.consortium.description}
             </p>
 
             <ul className="mt-10 space-y-4 border-t border-white/10 pt-6">
-              {[
-                'Multi-stakeholder working groups for every priority area',
-                'Cross-border committees that translate principles into outcomes',
-                'Joint programmes with regional councils and partner federations',
-                'Independent advisory boards composed of distinguished members',
-              ].map((line) => (
+              {site.consortium.bullets.map((line) => (
                 <li
                   key={line}
                   className="flex items-start gap-4 text-[14.5px] leading-[1.7] text-white/80"
@@ -57,24 +68,46 @@ export default function GlobalConsortium() {
               ))}
             </ul>
 
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
               <a href="#membership" className="btn-red">
-                Join the Consortium <ArrowRight className="h-4 w-4" />
+                {site.consortium.ctaPrimary} <ArrowRight className="h-4 w-4" />
               </a>
               <a href="#contact" className="btn-ghost-light">
-                Partner With USF
+                {site.consortium.ctaSecondary}
               </a>
             </div>
           </div>
 
-          {/* Connection diagram */}
+          {/* Connection diagram — desktop/tablet */}
           <div className="lg:col-span-7">
+            {/* Mobile: compact node list */}
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:hidden">
+              {NODES.map((n, i) => {
+                const Icon = n.icon;
+                return (
+                  <motion.div
+                    key={`mobile-${n.id}`}
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.05 }}
+                    className="flex items-center gap-3 border border-white/15 bg-white/[0.06] px-4 py-3 backdrop-blur-sm"
+                  >
+                    <Icon className="h-4 w-4 flex-none text-usf-red" />
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white">
+                      {n.label}
+                    </span>
+                  </motion.div>
+                );
+              })}
+            </div>
+
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.9, ease: 'easeOut' }}
-              className="relative aspect-square w-full max-w-[640px] mx-auto"
+              className="relative mx-auto hidden aspect-square w-full max-w-[640px] md:block"
             >
               <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full">
                 <defs>
@@ -144,8 +177,8 @@ export default function GlobalConsortium() {
                       transform: 'translate(-50%, -50%)',
                     }}
                   >
-                    <div className="group flex items-center gap-2 border border-white/15 bg-white/[0.06] px-3 py-2 text-[11.5px] font-semibold uppercase tracking-[0.1em] text-white backdrop-blur-sm transition-colors hover:border-usf-red hover:bg-usf-red">
-                      <Icon className="h-3.5 w-3.5 text-usf-red transition-colors group-hover:text-white" />
+                    <div className="group flex max-w-[120px] flex-col items-center gap-1 border border-white/15 bg-white/[0.06] px-2 py-1.5 text-center text-[9px] font-semibold uppercase leading-tight tracking-[0.06em] text-white backdrop-blur-sm transition-colors hover:border-usf-red hover:bg-usf-red sm:max-w-none sm:flex-row sm:gap-2 sm:whitespace-nowrap sm:px-3 sm:py-2 sm:text-[10px] lg:text-[11.5px] lg:tracking-[0.1em]">
+                      <Icon className="h-3 w-3 flex-none text-usf-red transition-colors group-hover:text-white sm:h-3.5 sm:w-3.5" />
                       {n.label}
                     </div>
                   </motion.div>
@@ -153,10 +186,12 @@ export default function GlobalConsortium() {
               })}
             </motion.div>
 
-            <div className="mt-6 grid grid-cols-3 gap-3 text-center text-[11px] uppercase tracking-eyebrow text-white/50">
-              <div>Council Tier</div>
-              <div className="text-usf-red">Working Groups</div>
-              <div>Regional Councils</div>
+            <div className="mt-6 hidden grid-cols-3 gap-2 text-center text-[10px] uppercase tracking-eyebrow text-white/50 md:grid sm:gap-3 sm:text-[11px]">
+              {site.consortium.diagramFooter.map((label, i) => (
+                <div key={label} className={i === 1 ? 'text-usf-red' : undefined}>
+                  {label}
+                </div>
+              ))}
             </div>
           </div>
         </div>

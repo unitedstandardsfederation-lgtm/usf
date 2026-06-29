@@ -1,0 +1,1069 @@
+{
+  "site": {
+    "name": "United Standards Federation",
+    "shortName": "USF",
+    "metaTitle": "United Standards Federation (USF) — Building Global Synergy Through Standards, Collaboration & Growth",
+    "metaDescription": "United Standards Federation (USF) - A USA-based global federation advancing international standards, certification, education, innovation, and sustainable growth.",
+    "copyright": "United Standards Federation (USF). All Rights Reserved."
+  },
+
+  "contact": {
+    "email": "info@unitedstandardsfederation.com",
+    "phone": "+1 (201) 449-7463",
+    "address": "16192 Coastal Highway\nLewes DE 19958, USA",
+    "hours": "Mon–Fri · 09:00–18:00 ET"
+  },
+
+  "nav": {
+    "utility": {
+      "tagline": "An international federation · 25+ countries",
+      "newsroomLabel": "Newsroom"
+    },
+    "items": [
+      { "label": "Home", "href": "/#home" },
+      { "label": "About USF", "href": "/#about" },
+      { "label": "Standards & Certification", "href": "/#services" },
+      { "label": "Membership", "href": "/#membership" },
+      { "label": "Global Consortium", "href": "/#consortium" },
+      { "label": "Services", "href": "/#services", "menu": "services" },
+      { "label": "Training & Education", "href": "/#services" },
+      { "label": "Contact", "href": "/#contact" }
+    ],
+    "menus": {
+      "services": {
+        "buttonAriaLabel": "Show all services"
+      }
+    },
+    "becomeMemberLabel": "Become a Member"
+  },
+
+  "hero": {
+    "metaLeft": "United Standards Federation",
+    "metaLeftSub": "USA · International Federation",
+    "metaRight": "25+ Countries · 100+ Partners",
+    "eyebrow": "A Global Federation for Standards & Collaboration",
+    "headlineStart": "Building Global Synergy Through ",
+    "headlineHighlight": "Standards",
+    "headlineEnd": " & Collaboration",
+    "description": "A USA-based global federation advancing international standards, certification, innovation, and sustainable growth — connecting governments, industries, academia, and civil society under one framework.",
+    "ctaPrimary": "Become a Member",
+    "ctaSecondary": "Explore Services",
+    "ctaTertiary": "Federation Charter",
+    "pillarsLabel": "Federation Pillars",
+    "pillars": [
+      "Global Standards",
+      "Certification Support",
+      "International Partnerships",
+      "Cross-Industry Collaboration",
+      "Research & Innovation",
+      "Global Development"
+    ],
+    "sidePanel": {
+      "eyebrow": "Federation Brief",
+      "lead": "A global platform connecting industries, governments, academia and non-profits under a unified framework of standards.",
+      "facts": [
+        { "label": "Headquarters", "value": "16192 Coastal Highway, Lewes DE 19958, USA" },
+        { "label": "Type", "value": "Global Non-Profit" },
+        { "label": "Sectors", "value": "10+ Industries" },
+        { "label": "Languages", "value": "EN · DE · NL · DA" }
+      ],
+      "governanceLabel": "Governance",
+      "governanceValue": "Council · Board · Committees",
+      "charterLink": "Charter"
+    }
+  },
+
+  "stats": {
+    "items": [
+      { "value": 25, "suffix": "+", "label": "Countries Connected", "sub": "Multi-region federation reach" },
+      { "value": 100, "suffix": "+", "label": "Strategic Partnerships", "sub": "Industry, academic, public sector" },
+      { "value": 10, "suffix": "+", "label": "Industry Sectors", "sub": "From healthcare to infrastructure" },
+      { "value": 24, "suffix": " Programs", "label": "Global Certifications", "sub": "Standards & accreditation tracks" }
+    ],
+    "activityLabel": "Federation Activity",
+    "activities": [
+      { "label": "International Collaboration Initiatives", "value": "Active" },
+      { "label": "Research & Innovation Networks", "value": "Operating" },
+      { "label": "Workforce Development Programs", "value": "Expanding" }
+    ]
+  },
+
+  "ecosystem": {
+    "eyebrow": "A Connected Federation",
+    "headlineStart": "A Connected ",
+    "headlineHighlight": "Global Ecosystem",
+    "description": "USF connects organisations from diverse sectors to create collaboration, innovation, standards excellence, and sustainable growth.",
+    "subDescription": "Each member is part of a structured framework with sector working groups, advisory boards, and cross-region committees that translate standards into measurable outcomes.",
+    "engageLabel": "Engage",
+    "cards": [
+      {
+        "id": "industry",
+        "no": "01",
+        "title": "Industry Partners",
+        "description": "Multinationals, mid-market leaders, and specialised firms shaping standards across regulated and emerging sectors.",
+        "items": ["Pharmaceuticals", "Biotechnology", "Healthcare", "Manufacturing", "Engineering", "Information Technology", "Consulting"]
+      },
+      {
+        "id": "educational",
+        "no": "02",
+        "title": "Educational Partners",
+        "description": "Universities, polytechnics, and research institutes that anchor USF programmes in academic rigour and exchange.",
+        "items": ["Universities", "Academic Institutions", "Research Centers", "Innovation Labs"]
+      },
+      {
+        "id": "government",
+        "no": "03",
+        "title": "Government & Institutional",
+        "description": "Public agencies and regulators collaborating on governance, capacity building, and international programmes.",
+        "items": ["Ministries", "Public Agencies", "Regulatory Authorities", "International Programs"]
+      },
+      {
+        "id": "nonprofit",
+        "no": "04",
+        "title": "Non-Profit Organizations",
+        "description": "NGOs, foundations, and community organisations advancing social impact, equity, and sustainable development.",
+        "items": ["NGOs", "Foundations", "Development Agencies", "Community Organizations"]
+      }
+    ]
+  },
+
+  "about": {
+    "eyebrow": "About",
+    "heading": "About United Standards Federation",
+    "leadParagraph": "A USA-based global alliance dedicated to strengthening standards, development, certification, innovation, education, workforce advancement, and international collaboration.",
+    "facts": [
+      { "label": "Founded", "value": "United States", "display": "large" },
+      { "label": "Charter", "value": "Global Federation", "display": "large" },
+      { "label": "Governance", "value": "Council · Board · Committees", "display": "small" },
+      { "label": "Operating Model", "value": "Members · Working Groups", "display": "small" }
+    ],
+    "paragraphs": [
+      "United Standards Federation (USF) is a USA-based global alliance dedicated to strengthening standards, development, certification, innovation, education, workforce advancement, and international collaboration. Through a deliberate multi-stakeholder model, USF convenes institutions that would not ordinarily share a table, and gives them a structured framework to act together.",
+      "USF serves as a collaborative platform connecting organisations from diverse sectors to create synergy, improve quality systems, accelerate growth, support international expansion, and promote sustainable development. Members benefit from committee participation, sector working groups, peer review programmes, and regional councils that translate global priorities into local action.",
+      "Anchored in the United States and operating across North America, Europe, and Asia, the Federation maintains a quiet, principled posture: rigorous in process, expansive in collaboration, and uncompromising about outcomes that endure."
+    ],
+    "pullQuote": "We bring standards, certification, and collaboration into a single, principled framework — so that organisations across borders can build with shared confidence.",
+    "pullQuoteAttribution": "The USF Charter",
+    "ctaPrimary": "Read the Charter",
+    "ctaSecondary": "Meet the Leadership"
+  },
+
+  "missionVision": {
+    "eyebrow": "Mandate",
+    "heading": "Mission & Vision",
+    "description": "Two principles, codified in the USF charter, that anchor every programme, working group, and partnership the Federation enters.",
+    "items": [
+      {
+        "id": "mission",
+        "no": "I",
+        "label": "Mission",
+        "title": "To foster a globally connected ecosystem that promotes standards, ethics, innovation, collaboration, and mutual growth for organisations worldwide.",
+        "points": [
+          "Advance international standards across regulated and emerging sectors",
+          "Convene members from industry, government, academia, and civil society",
+          "Translate principles into programmes that produce measurable impact"
+        ]
+      },
+      {
+        "id": "vision",
+        "no": "II",
+        "label": "Vision",
+        "title": "To become a globally trusted federation for standards, partnerships, certification, and international development initiatives.",
+        "points": [
+          "A unified framework across borders, sectors, and disciplines",
+          "A recognised seal of rigour for certification and accreditation",
+          "A long-term partner for sustainable, equitable global development"
+        ]
+      }
+    ]
+  },
+
+  "services": {
+    "eyebrow": "What We Do",
+    "headingStart": "Driving Standards, Innovation, Collaboration & ",
+    "headingHighlight": "Sustainable Development",
+    "headingEnd": " Across Industries.",
+    "description": "Eight core service lines codify how USF supports member organisations — from foundational standards work to advanced research and innovation. Each line operates under federation-wide governance and is delivered through dedicated working groups.",
+    "secretariatLink": "Speak to the Secretariat",
+    "readMoreLabel": "Read More",
+    "pageHref": "/services",
+    "detailPage": {
+      "backLabel": "All Services",
+      "offeringsLabel": "What We Offer",
+      "contactLabel": "Speak to the Secretariat",
+      "notFoundTitle": "Service Not Found",
+      "notFoundBody": "The service you are looking for is not available. Return to the homepage to explore our service lines.",
+      "notFoundLink": "Back to Services"
+    },
+    "items": [
+      {
+        "id": "standards",
+        "no": "01",
+        "title": "Standards & Compliance",
+        "summary": "Frameworks, governance, and quality systems that align organisations with international expectations.",
+        "href": "/services/standards",
+        "items": ["Standards Alignment", "Governance Frameworks", "Compliance Readiness", "Quality Systems", "Process Improvement", "Best Practices"],
+        "detail": {
+          "intro": "USF helps member organisations design, adopt, and maintain standards and compliance systems that meet international expectations — across regulated industries, public institutions, and cross-border partnerships.",
+          "paragraphs": [
+            "Our working groups translate federation-wide frameworks into practical guidance: governance models, quality systems, audit readiness, and continuous improvement programmes tailored to your sector.",
+            "Whether you are aligning with existing international standards or building internal compliance capacity, USF connects you to peer institutions, subject-matter experts, and structured pathways for sustainable conformance."
+          ]
+        }
+      },
+      {
+        "id": "certification",
+        "no": "02",
+        "title": "Certification & Accreditation",
+        "summary": "Structured pathways for recognition, assessment, and accreditation across regulated sectors.",
+        "href": "/services/certification",
+        "items": ["Certification Support", "Accreditation Programs", "Compliance Verification", "Quality Recognition", "Standards Assessment"],
+        "detail": {
+          "intro": "Certification and accreditation signal credibility to regulators, partners, and markets. USF supports members through structured assessment pathways, verification programmes, and recognition frameworks.",
+          "paragraphs": [
+            "From preparatory audits to ongoing compliance verification, our programmes help organisations demonstrate quality, safety, and governance in line with federation standards.",
+            "Members gain access to advisory support, peer review networks, and accreditation resources designed for institutions operating across multiple jurisdictions."
+          ]
+        }
+      },
+      {
+        "id": "membership",
+        "no": "03",
+        "title": "Membership & Global Networking",
+        "summary": "Strategic alliances, committee participation, and international visibility for member organisations.",
+        "href": "/services/membership",
+        "items": ["Membership Programs", "Strategic Alliances", "International Networking", "Global Visibility", "Committee Participation"],
+        "detail": {
+          "intro": "Federation membership opens doors to strategic alliances, committee tables, and international visibility across USF's global network of governments, industries, and academic institutions.",
+          "paragraphs": [
+            "Members participate in working groups, regional convenings, and cross-sector initiatives that amplify their influence and extend their reach into new markets and partnerships.",
+            "USF membership programmes are designed for institutions seeking long-term collaboration — not transactional networking — with structured pathways for affiliate, institutional, and strategic partner engagement."
+          ]
+        }
+      },
+      {
+        "id": "training",
+        "no": "04",
+        "title": "Training & Education",
+        "summary": "Professional development, executive education, and academic exchange across the Federation network.",
+        "href": "/services/training",
+        "items": ["Professional Training", "Leadership Development", "Workshops", "Seminars", "Academic Collaboration", "Exchange Programs"],
+        "detail": {
+          "intro": "USF delivers professional development, executive education, and academic exchange programmes that build standards literacy and leadership capacity across the Federation network.",
+          "paragraphs": [
+            "Workshops, seminars, and credential pathways are developed with member institutions and subject-matter experts to address real-world compliance, governance, and innovation challenges.",
+            "Academic collaboration and exchange programmes connect universities, training providers, and member organisations — creating a pipeline of talent equipped for international standards work."
+          ]
+        }
+      },
+      {
+        "id": "it",
+        "no": "05",
+        "title": "IT & Data",
+        "summary": "UI/UX design, digital transformation, ERP, CRM, and enterprise software for organizations in every industry.",
+        "href": "/services",
+        "items": ["Digital Transformation", "Enterprise IT Solutions", "Cloud Integration", "Business Intelligence", "Data Governance", "Artificial Intelligence", "Intelligent Automation", "Cybersecurity Awareness"],
+        "detail": {
+          "intro": "Modern institutions need secure, scalable technology and sound data governance. USF's IT and data services help members digitise operations, integrate cloud platforms, and adopt intelligent automation responsibly.",
+          "paragraphs": [
+            "From enterprise architecture to business intelligence and cybersecurity awareness, our programmes support digital transformation aligned with federation standards and regulatory expectations.",
+            "Members benefit from shared resources, vendor-neutral guidance, and collaborative pilots in artificial intelligence, automation, and data stewardship."
+          ]
+        }
+      },
+      {
+        "id": "resourcing",
+        "no": "06",
+        "title": "Global Resourcing",
+        "summary": "Staffing, recruiting, workforce consulting, and direct hire for institutions building teams across borders.",
+        "href": "/services/resourcing",
+        "items": ["Talent Networking", "Workforce Development", "International Staffing", "Executive Search Partnerships", "Professional Exchange Programs"],
+        "detail": {
+          "intro": "USF connects member institutions to talent networks, workforce development programmes, and international exchange opportunities that strengthen organisational capacity across borders.",
+          "paragraphs": [
+            "Whether you need executive search partnerships, professional exchange placements, or structured workforce development, our resourcing services are built on trusted federation relationships.",
+            "Members access curated talent pools, sector-specific staffing pathways, and programmes designed to develop the next generation of standards and compliance professionals."
+          ]
+        }
+      },
+      {
+        "id": "partnerships",
+        "no": "07",
+        "title": "Strategic Partnerships & Collaboration",
+        "summary": "Cross-sector partnerships with governments, industries, and academic institutions worldwide.",
+        "href": "/services/partnerships",
+        "items": ["Government Collaboration", "Industry Alliances", "Academic Partnerships", "Global Programs", "International Cooperation"],
+        "detail": {
+          "intro": "USF facilitates strategic partnerships between governments, industries, academic institutions, and civil society — turning shared objectives into durable, federation-governed programmes.",
+          "paragraphs": [
+            "From bilateral government collaboration to industry alliances and academic research partnerships, we provide the governance framework and secretariat support to design and deliver global programmes.",
+            "Members and partners work through structured cooperation models that ensure transparency, accountability, and measurable outcomes across regions and sectors."
+          ]
+        }
+      },
+      {
+        "id": "research",
+        "no": "08",
+        "title": "Research & Innovation",
+        "summary": "Research partnerships, technology transfer, and innovation programmes that shape future standards.",
+        "href": "/services/research",
+        "items": ["Research Partnerships", "Innovation Ecosystems", "Technology Transfer", "Knowledge Exchange", "Collaborative Research", "Future Technologies"],
+        "detail": {
+          "intro": "Research and innovation at USF bridge academia, industry, and policy — generating evidence, prototypes, and knowledge exchange that inform the standards of tomorrow.",
+          "paragraphs": [
+            "Collaborative research programmes, innovation ecosystems, and technology transfer initiatives connect members to cutting-edge work in emerging fields and regulated sectors alike.",
+            "Federation working groups translate research outputs into practical guidance, ensuring that innovation remains aligned with governance, safety, and international interoperability."
+          ]
+        }
+      }
+    ]
+  },
+
+  "globalResourcing": {
+    "metaTitle": "Staffing, Recruiting, Consulting & Direct Hire — USF Global Resourcing",
+    "metaDescription": "USF Global Resourcing provides staffing, recruiting, workforce consulting, and direct hire services for governments, corporations, healthcare organizations, universities, and institutions worldwide.",
+    "hero": {
+      "eyebrow": "Global Resourcing Services",
+      "headline": "Staffing, Recruiting, Consulting & Direct Hire—Delivered Through a Trusted Global Network",
+      "description": "United Standards Federation helps organizations find, place, and develop the people they need—whether you require flexible staffing, full-cycle recruitment, strategic workforce consulting, or permanent direct hire placements. We serve governments, corporations, healthcare systems, universities, and institutions across 25+ countries with structured, quality-driven workforce solutions.",
+      "servicePillars": ["Staffing", "Recruiting", "Consulting", "Direct Hire"],
+      "ctaPrimary": "Request Workforce Consultation",
+      "ctaSecondary": "Become a Workforce Partner",
+      "backLabel": "All Services"
+    },
+    "coreServices": {
+      "eyebrow": "Our Services",
+      "heading": "Four Clear Ways We Support Your Workforce",
+      "description": "Every engagement starts with understanding your need. USF provides staffing, recruiting, consulting, and direct hire as distinct, fully supported service lines—so you always know exactly what you are getting.",
+      "includesLabel": "What's Included",
+      "items": [
+        {
+          "id": "staffing",
+          "title": "Staffing",
+          "tagline": "Flexible talent for immediate and project-based needs",
+          "summary": "When your organization needs qualified professionals quickly—without a permanent hire—USF staffing connects you with pre-vetted talent for contract, temporary, and project-based assignments across industries.",
+          "includes": [
+            "Contract and temporary staffing",
+            "Project-based team deployment",
+            "Seasonal and surge workforce support",
+            "Specialist roles across healthcare, IT, engineering, and more",
+            "Managed staffing programmes for institutions and enterprises"
+          ],
+          "ctaLabel": "Request Staffing Support"
+        },
+        {
+          "id": "recruiting",
+          "title": "Recruiting",
+          "tagline": "Full-cycle talent acquisition for permanent roles",
+          "summary": "USF recruiting handles the complete hiring process—from role definition and candidate sourcing to screening, shortlisting, and interview coordination—helping you fill professional, specialist, and leadership positions with confidence.",
+          "includes": [
+            "Professional and specialist recruitment",
+            "Executive and leadership search",
+            "Candidate sourcing and talent mapping",
+            "Screening, assessment, and shortlisting",
+            "Interview coordination and offer support"
+          ],
+          "ctaLabel": "Start a Recruiting Engagement"
+        },
+        {
+          "id": "consulting",
+          "title": "Consulting",
+          "tagline": "Strategic workforce guidance—not just placement",
+          "summary": "Our workforce consulting helps leaders plan ahead. USF advisors work with your team on hiring strategy, organizational capability, succession planning, international expansion, and long-term talent pipeline development.",
+          "includes": [
+            "Workforce planning and strategy",
+            "Organizational design and capability assessment",
+            "Succession planning and leadership pipelines",
+            "International hiring and expansion advisory",
+            "Talent market insights and workforce readiness reviews"
+          ],
+          "ctaLabel": "Book a Consulting Session"
+        },
+        {
+          "id": "direct-hire",
+          "title": "Direct Hire",
+          "tagline": "Permanent placements with lasting organizational fit",
+          "summary": "For roles that belong on your payroll, USF direct hire delivers thoroughly evaluated candidates for permanent employment—supporting your team from search through placement, onboarding coordination, and post-hire follow-up.",
+          "includes": [
+            "Permanent full-time and part-time placements",
+            "End-to-end search and selection support",
+            "Skills, experience, and culture-fit evaluation",
+            "Offer negotiation and onboarding coordination",
+            "Post-placement relationship support"
+          ],
+          "ctaLabel": "Explore Direct Hire"
+        }
+      ]
+    },
+    "trustStrip": {
+      "items": [
+        "Staffing Services",
+        "Recruiting Services",
+        "Workforce Consulting",
+        "Direct Hire Placements",
+        "International Talent Networks",
+        "Federation-Quality Standards"
+      ]
+    },
+    "whyUsf": {
+      "eyebrow": "Our Approach",
+      "heading": "One Partner. Four Workforce Services. Complete Clarity.",
+      "paragraphs": [
+        "Organizations come to USF for different reasons—some need temporary staffing, others need recruiters to fill permanent roles, many need consulting before they hire at all, and others want direct hire support for critical positions. We make each service distinct, so you never have to guess what we provide.",
+        "Whether you are a government agency building public-sector capacity, a healthcare system staffing clinical teams, a university sourcing research talent, or a corporation expanding internationally—USF delivers staffing, recruiting, consulting, and direct hire through a governed global network built on professional standards and long-term trust."
+      ]
+    },
+    "whatWeOffer": {
+      "eyebrow": "Extended Capabilities",
+      "heading": "Specialized Support Across Every Service Line",
+      "description": "Each of our four core services—staffing, recruiting, consulting, and direct hire—can be extended with specialized capabilities for complex, cross-border, and sector-specific workforce needs.",
+      "items": [
+        {
+          "id": "international-collaboration",
+          "title": "International & Cross-Border Workforce",
+          "summary": "Global staffing, recruiting, and direct hire support for organizations operating across multiple countries and regulatory environments."
+        },
+        {
+          "id": "executive-search",
+          "title": "Executive & Leadership Search",
+          "summary": "Senior-level recruiting and direct hire for executives, directors, and strategic leaders who shape organizational direction."
+        },
+        {
+          "id": "project-resources",
+          "title": "Project & Contract Engagements",
+          "summary": "Staffing solutions for defined projects, programme rollouts, and time-bound initiatives requiring specialist expertise."
+        },
+        {
+          "id": "academia-partnerships",
+          "title": "Industry-Academia Talent Pathways",
+          "summary": "Connecting universities, research institutions, and employers through consulting, recruiting, and direct hire programmes."
+        }
+      ]
+    },
+    "industries": {
+      "eyebrow": "Sector Coverage",
+      "heading": "Industries We Support",
+      "items": [
+        "Healthcare",
+        "Pharmaceuticals",
+        "Biotechnology",
+        "Information Technology",
+        "Artificial Intelligence",
+        "Engineering",
+        "Manufacturing",
+        "Education",
+        "Research",
+        "Financial Services",
+        "Government",
+        "Infrastructure",
+        "Consulting",
+        "Renewable Energy",
+        "Non-Profit Organizations",
+        "Life Sciences"
+      ]
+    },
+    "process": {
+      "eyebrow": "How We Work",
+      "heading": "Our Resourcing Process",
+      "steps": [
+        "Understand Business Requirements",
+        "Workforce Assessment",
+        "Talent Identification",
+        "Professional Screening",
+        "Organization Matching",
+        "Interview Coordination",
+        "Successful Placement",
+        "Long-Term Relationship Support"
+      ]
+    },
+    "whyChoose": {
+      "eyebrow": "Member Advantage",
+      "heading": "Why Organizations Choose USF",
+      "items": [
+        {
+          "id": "international-network",
+          "title": "International Network",
+          "body": "Access to professionals across multiple countries."
+        },
+        {
+          "id": "quality-selection",
+          "title": "Quality-Driven Selection",
+          "body": "Focus on capability, experience, and organizational fit."
+        },
+        {
+          "id": "cross-industry",
+          "title": "Cross-Industry Expertise",
+          "body": "Supporting diverse industries with specialized workforce solutions."
+        },
+        {
+          "id": "global-standards",
+          "title": "Global Standards",
+          "body": "Professional practices aligned with international expectations."
+        },
+        {
+          "id": "collaborative",
+          "title": "Collaborative Approach",
+          "body": "Working closely with clients to understand long-term workforce objectives."
+        },
+        {
+          "id": "long-term",
+          "title": "Long-Term Partnerships",
+          "body": "Building relationships beyond individual hiring projects."
+        }
+      ]
+    },
+    "globalNetwork": {
+      "eyebrow": "Worldwide Reach",
+      "heading": "Connecting Talent Across Borders",
+      "description": "USF works with organizations, universities, industry associations, professional communities, and international partners to facilitate trusted workforce collaboration around the world.",
+      "regions": [
+        "North America",
+        "Europe",
+        "Middle East",
+        "South Asia",
+        "Southeast Asia",
+        "Australia",
+        "Africa"
+      ]
+    },
+    "whoWeWorkWith": {
+      "eyebrow": "Partners & Clients",
+      "heading": "Who We Work With",
+      "items": [
+        { "id": "corporations", "name": "Corporations" },
+        { "id": "government", "name": "Government Institutions" },
+        { "id": "healthcare", "name": "Healthcare Organizations" },
+        { "id": "pharma", "name": "Pharmaceutical Companies" },
+        { "id": "technology", "name": "Technology Companies" },
+        { "id": "engineering", "name": "Engineering Firms" },
+        { "id": "universities", "name": "Universities" },
+        { "id": "research", "name": "Research Organizations" },
+        { "id": "consulting", "name": "Consulting Firms" },
+        { "id": "associations", "name": "Industry Associations" },
+        { "id": "ngos", "name": "NGOs" },
+        { "id": "development", "name": "International Development Partners" }
+      ]
+    },
+    "featuredSolutions": {
+      "eyebrow": "Quick Reference",
+      "heading": "Which Service Do You Need?",
+      "learnMoreLabel": "Get Started",
+      "items": [
+        {
+          "id": "staffing",
+          "title": "Staffing",
+          "summary": "Contract, temporary, and project-based professionals when you need flexible capacity."
+        },
+        {
+          "id": "recruiting",
+          "title": "Recruiting",
+          "summary": "Full-cycle recruitment for permanent professional, specialist, and leadership roles."
+        },
+        {
+          "id": "consulting",
+          "title": "Consulting",
+          "summary": "Workforce strategy, planning, and advisory before and alongside your hiring decisions."
+        },
+        {
+          "id": "direct-hire",
+          "title": "Direct Hire",
+          "summary": "Permanent placements with end-to-end search, selection, and onboarding support."
+        }
+      ]
+    },
+    "editorial": {
+      "eyebrow": "Perspective",
+      "heading": "Why Organizations Choose USF for Workforce Services",
+      "paragraphs": [
+        "Staffing, recruiting, consulting, and direct hire are distinct needs—and USF treats them that way. Organizations should not have to navigate vague promises or unclear service boundaries. We provide structured workforce services backed by a global federation network, professional standards, and advisors who understand regulated industries, public institutions, and international operations.",
+        "From filling an urgent staffing gap to building a multi-year hiring strategy, USF gives you a single trusted partner with four clearly defined service lines and the global reach to deliver at scale."
+      ]
+    },
+    "clientEngagement": {
+      "eyebrow": "Get Started",
+      "headline": "Tell Us What You Need—Staffing, Recruiting, Consulting, or Direct Hire",
+      "description": "Whether you need temporary staffing for a programme launch, recruiters to fill permanent roles, consulting to plan your workforce strategy, or direct hire support for a critical position—our team will guide you to the right service and get started quickly.",
+      "ctaPrimary": "Request Consultation",
+      "ctaSecondary": "Become a Workforce Partner"
+    },
+    "faq": {
+      "eyebrow": "Questions",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What is the difference between staffing, recruiting, consulting, and direct hire?",
+          "answer": "Staffing provides contract, temporary, and project-based professionals for flexible workforce needs. Recruiting covers full-cycle talent acquisition for permanent roles—including sourcing, screening, and interview coordination. Consulting offers strategic workforce planning and advisory services without placement as the primary deliverable. Direct hire focuses specifically on permanent placements where the candidate joins your organization on your payroll, with USF supporting search through onboarding."
+        },
+        {
+          "question": "Do you provide staffing services?",
+          "answer": "Yes. USF staffing connects organizations with qualified professionals for contract, temporary, project-based, and managed staffing programmes—across healthcare, technology, engineering, education, government, and other sectors."
+        },
+        {
+          "question": "Do you offer recruiting and executive search?",
+          "answer": "Yes. USF recruiting includes professional, specialist, and executive search services. We manage candidate sourcing, screening, shortlisting, and interview coordination for permanent roles at all levels."
+        },
+        {
+          "question": "What does workforce consulting include?",
+          "answer": "USF consulting covers workforce planning, organizational capability assessment, succession planning, international hiring strategy, talent pipeline development, and workforce readiness reviews—helping leaders make informed decisions before and during hiring."
+        },
+        {
+          "question": "How does direct hire work with USF?",
+          "answer": "With direct hire, USF manages the search and selection process for permanent positions on your payroll. We evaluate skills, experience, and organizational fit, support offer coordination, and provide post-placement follow-up to ensure a successful long-term match."
+        },
+        {
+          "question": "Do you provide international staffing and recruiting?",
+          "answer": "Yes. All four service lines—staffing, recruiting, consulting, and direct hire—are available for cross-border and international workforce needs through our federation network spanning North America, Europe, the Middle East, South Asia, Southeast Asia, Australia, and Africa."
+        },
+        {
+          "question": "What industries do you support?",
+          "answer": "USF supports organizations across healthcare, pharmaceuticals, biotechnology, information technology, artificial intelligence, engineering, manufacturing, education, research, financial services, government, infrastructure, consulting, renewable energy, life sciences, and non-profit sectors."
+        },
+        {
+          "question": "What makes USF different from traditional staffing or recruitment agencies?",
+          "answer": "USF is an international federation—not a commercial job board. We offer four clearly defined workforce services through a governed global network, with professional standards, sector expertise, and long-term partnership models designed for institutions that value quality and trust over volume hiring."
+        }
+      ]
+    },
+    "finalCta": {
+      "headline": "Ready to Get Started? Choose Your Service.",
+      "description": "Staffing, recruiting, consulting, or direct hire—contact the USF Global Resourcing team and we will connect you with the right workforce solution for your organization.",
+      "ctaPrimary": "Start a Conversation",
+      "ctaSecondary": "Become a Member"
+    }
+  },
+
+  "servicesPage": {
+    "metaTitle": "Digital Services — United Standards Federation (USF)",
+    "metaDescription": "End-to-end digital solutions — website development, UI/UX design, custom applications, ERP & CRM systems, AI & automation, and data analytics for organizations across every industry, in 25+ countries.",
+    "hero": {
+      "eyebrow": "Our Services",
+      "headline": "End-to-End Digital Solutions for Global Organizations",
+      "description": "From UI/UX design and custom websites to ERP, CRM, and enterprise platforms — USF builds the software organizations rely on. We deliver across the full stack for every industry we serve, in 25+ countries.",
+      "ctaPrimary": "Get a Free Consultation",
+      "ctaSecondary": "View All Services",
+      "ctaPrimaryHref": "/#contact",
+      "ctaSecondaryHref": "#web-development"
+    },
+    "overviewStrip": {
+      "items": [
+        { "id": "web", "label": "Website Development", "href": "#web-development" },
+        { "id": "app", "label": "Application Development", "href": "#app-development" },
+        { "id": "ui", "label": "UI/UX Design", "href": "#ui-ux-design" },
+        { "id": "erp", "label": "ERP & CRM", "href": "#erp-crm" },
+        { "id": "ai", "label": "AI & Automation", "href": "#ai-automation" },
+        { "id": "data", "label": "Data Science & Analytics", "href": "#data-science" }
+      ]
+    },
+    "featuresLabel": "What's included",
+    "audienceLabel": "Who it's for",
+    "services": [
+      {
+        "id": "web-development",
+        "no": "01",
+        "eyebrow": "Website Development",
+        "headline": "Websites That Work as Hard as Your Organization",
+        "body": "We design and develop fast, secure websites for international organizations — with UI/UX built in from day one. Corporate sites, membership portals, e-commerce stores, and multi-language platforms built to convert visitors into clients and partners.",
+        "features": [
+          "UI/UX design — research, wireframes, prototypes & user testing",
+          "Custom design & development (React, Next.js, WordPress)",
+          "E-commerce, membership portals & registration systems",
+          "Multi-language support and CMS integration",
+          "Mobile-first, responsive & SEO-optimized",
+          "Hosting, maintenance & performance monitoring"
+        ],
+        "audience": "All industries — pharma, e-commerce, manufacturing, recruitment, NGOs, government, education, trade federations, and professional services",
+        "cta": "Start Your Website Project",
+        "ctaHref": "/#contact"
+      },
+      {
+        "id": "app-development",
+        "no": "02",
+        "eyebrow": "Application Development",
+        "headline": "Custom Applications Built for How Your Organization Actually Operates",
+        "body": "We build custom web and mobile applications that match your workflows — member systems, certification platforms, B2B portals, and industry-specific tools that scale across borders.",
+        "features": [
+          "Full-stack web & mobile app development",
+          "Member management, compliance tracking & partner portals",
+          "API integrations with ERP, CRM, and third-party tools",
+          "B2B dashboards and role-based access for global teams",
+          "Ongoing support, updates & version management"
+        ],
+        "audience": "All industries — certification bodies, e-commerce, manufacturing, healthcare, recruitment, IT firms, and global consortiums",
+        "cta": "Discuss Your Application",
+        "ctaHref": "/#contact"
+      },
+      {
+        "id": "ui-ux-design",
+        "no": "03",
+        "eyebrow": "UI/UX Design",
+        "headline": "Design Better Experiences Across Every Digital Touchpoint.",
+        "body": "We provide end-to-end UI/UX design for organizations in every industry — from user research and wireframes to polished interfaces and design systems that improve usability, engagement, and conversion.",
+        "features": [
+          "UI/UX design — user research, wireframes, prototypes & design systems",
+          "Website and app interface architecture",
+          "User journey mapping and interaction design",
+          "Accessibility-first and responsive design standards",
+          "Design handoff and collaboration with development teams"
+        ],
+        "audience": "All industries — pharmaceuticals, manufacturing, e-commerce, healthcare, recruitment, finance, education, government, logistics, and professional services",
+        "cta": "Discuss Your UI/UX Project",
+        "ctaHref": "/#contact"
+      },
+      {
+        "id": "erp-crm",
+        "no": "04",
+        "eyebrow": "ERP & CRM Solutions",
+        "headline": "Build ERP & CRM Systems That Run Your Organization.",
+        "body": "We design and implement ERP and CRM solutions that align with your real workflows — covering operations, sales, finance, inventory, and customer lifecycle management for organizations across every industry.",
+        "features": [
+          "ERP systems for finance, inventory, supply chain & operations",
+          "CRM platforms for sales pipelines, leads & customer lifecycle",
+          "HRM, procurement, billing & industry-specific workflow software",
+          "Custom integrations with existing tools and databases",
+          "Implementation, team training, and long-term support"
+        ],
+        "audience": "All industries — pharmaceuticals, manufacturing, e-commerce, healthcare, recruitment, finance, education, government, logistics, and professional services",
+        "cta": "Discuss Your ERP/CRM Needs",
+        "ctaHref": "/#contact"
+      },
+      {
+        "id": "ai-automation",
+        "no": "05",
+        "eyebrow": "AI & Automation",
+        "headline": "Automate the Repetitive. Focus on What Moves Your Organization Forward.",
+        "body": "We build AI-powered workflows that eliminate bottlenecks and reduce costs — from document processing and lead pipelines to member support and cross-border coordination.",
+        "features": [
+          "Business process automation (n8n, Zapier, Make)",
+          "AI lead generation & intelligent document processing",
+          "Chatbots and AI assistants for member support",
+          "CRM, email, WhatsApp & notification automation",
+          "Custom AI integrations (OpenAI, Claude & other LLMs)"
+        ],
+        "audience": "All industries — pharma, e-commerce, manufacturing, recruitment, and organizations managing high volumes of applications or communications",
+        "cta": "Explore Automation Solutions",
+        "ctaHref": "/#contact"
+      },
+      {
+        "id": "data-science",
+        "no": "06",
+        "eyebrow": "Data Science & Analytics",
+        "headline": "Turn Your Organization's Data Into Decisions",
+        "body": "Our data science team turns member data, market trends, and operational metrics into clear insight — so leadership can act faster across every market you serve.",
+        "features": [
+          "Real-time business intelligence dashboards",
+          "Member engagement & market research analytics",
+          "Predictive modeling for growth and retention",
+          "Data pipelines and stakeholder reporting",
+          "Integration with Excel, Power BI, Tableau & more"
+        ],
+        "audience": "All industries — leadership teams in pharma, e-commerce, manufacturing, recruitment, research, and global operations",
+        "cta": "Talk to Our Data Team",
+        "ctaHref": "/#contact"
+      }
+    ],
+    "whyUsf": {
+      "heading": "Why Organizations in 25 Countries Choose USF",
+      "items": [
+        {
+          "id": "global",
+          "stat": "25 Countries",
+          "title": "Global Reach",
+          "body": "Serving organizations across Asia, Europe, the Americas, and beyond"
+        },
+        {
+          "id": "disciplines",
+          "stat": "6 Disciplines",
+          "title": "Full-Stack Team",
+          "body": "Web, app, UI/UX, ERP & CRM, AI, and data — all under one roof"
+        },
+        {
+          "id": "security",
+          "stat": "Enterprise-Grade",
+          "title": "Security & Compliance",
+          "body": "Built to meet international data protection standards"
+        },
+        {
+          "id": "partners",
+          "stat": "Long-Term Partners",
+          "title": "Not Just Vendors",
+          "body": "We stay involved after launch — support, growth, iteration"
+        }
+      ]
+    },
+    "industries": {
+      "heading": "Built for Every Industry We Serve",
+      "description": "We deliver UI/UX design, ERP, CRM, and custom software to organizations in every sector we serve — from pharma compliance and manufacturing operations to recruitment platforms and trade federation portals. Every industry has different needs; we build accordingly.",
+      "items": [
+        "Pharmaceuticals",
+        "Information Technology",
+        "Recruitment & Staffing",
+        "Manufacturing",
+        "Healthcare",
+        "Education & Training",
+        "Legal & Compliance",
+        "Finance & Banking",
+        "Logistics & Supply Chain",
+        "Government & Public Sector",
+        "Research & Academia",
+        "Non-Profits & NGOs"
+      ]
+    },
+    "process": {
+      "heading": "How We Work With You",
+      "steps": [
+        {
+          "id": "discovery",
+          "no": "01",
+          "title": "Discovery Call",
+          "description": "We learn your organization's goals, existing systems, and the specific problem you need solved. No templates. No assumptions."
+        },
+        {
+          "id": "proposal",
+          "no": "02",
+          "title": "Proposal & Scope",
+          "description": "You receive a clear proposal — what we'll build, how long it takes, and what it costs. No hidden charges."
+        },
+        {
+          "id": "build",
+          "no": "03",
+          "title": "Design & Development",
+          "description": "Our team designs, builds, and tests. You get regular updates and review checkpoints throughout."
+        },
+        {
+          "id": "launch",
+          "no": "04",
+          "title": "Launch & Handover",
+          "description": "We launch, train your team, and hand over documentation. You're in control from day one."
+        },
+        {
+          "id": "support",
+          "no": "05",
+          "title": "Ongoing Support",
+          "description": "We offer retainer and maintenance plans so your systems stay current, secure, and growing."
+        }
+      ]
+    },
+    "finalCta": {
+      "heading": "Ready to Build Something That Works Globally?",
+      "description": "Whether you're a pharma company entering new markets, a certification body going digital, or a recruitment platform scaling internationally — we're ready to help.",
+      "ctaPrimary": "Book a Free Consultation",
+      "ctaSecondary": "Contact Our Team",
+      "ctaPrimaryHref": "/#contact",
+      "ctaSecondaryHref": "/#contact"
+    }
+  },
+
+  "whyJoin": {
+    "eyebrow": "Member Value",
+    "heading": "Why Organisations Join USF",
+    "description": "Federation membership is built around six durable advantages — each backed by formal programmes, working groups, and partner institutions.",
+    "items": [
+      { "id": "recognition", "title": "Global Recognition", "body": "Be associated with a Federation that signals rigour, governance, and international credibility." },
+      { "id": "visibility", "title": "International Visibility", "body": "Reach decision-makers, peer institutions, and prospective partners across 25+ countries." },
+      { "id": "partnerships", "title": "Strategic Partnerships", "body": "Move from transactional outreach to long-term alliances with industry, academia, and government." },
+      { "id": "standards", "title": "Standards Guidance", "body": "Direct access to working groups, frameworks, and advisory services that shape your standards journey." },
+      { "id": "networking", "title": "Industry Networking", "body": "Closed-door forums, committee tables, and curated convenings across sectors and regions." },
+      { "id": "growth", "title": "Growth Opportunities", "body": "Pathways into new markets, talent pools, and collaborative R&D programmes." }
+    ]
+  },
+
+  "industries": {
+    "eyebrow": "Sector Coverage",
+    "heading": "Industries We Support",
+    "description": "Twelve sectors anchor USF's standards and certification work, each represented by committees, technical advisors, and partner institutions across the Federation.",
+    "committeeLabel": "Committee",
+    "items": [
+      { "id": "healthcare", "name": "Healthcare & Life Sciences", "tag": "Regulated" },
+      { "id": "pharma", "name": "Pharmaceuticals & Biotechnology", "tag": "Regulated" },
+      { "id": "education", "name": "Education & Research", "tag": "Academic" },
+      { "id": "it", "name": "Information Technology", "tag": "Tech" },
+      { "id": "manufacturing", "name": "Manufacturing & Engineering", "tag": "Industrial" },
+      { "id": "sustainability", "name": "Sustainability & Environment", "tag": "ESG" },
+      { "id": "consulting", "name": "Consulting & Professional Services", "tag": "Advisory" },
+      { "id": "trade", "name": "International Trade", "tag": "Cross-Border" },
+      { "id": "infrastructure", "name": "Infrastructure & Development", "tag": "Public Works" },
+      { "id": "nonprofit", "name": "Non-Profit & Social Impact", "tag": "Civil Society" },
+      { "id": "government", "name": "Government Institutions", "tag": "Public Sector" },
+      { "id": "innovation", "name": "Innovation & Technology", "tag": "R&D" }
+    ]
+  },
+
+  "consortium": {
+    "eyebrow": "Global Consortium",
+    "heading": "Building Global Partnerships",
+    "description": "USF facilitates collaboration among governments, industries, universities, NGOs, technology organisations, and development partners to create sustainable impact and international growth.",
+    "bullets": [
+      "Multi-stakeholder working groups for every priority area",
+      "Cross-border committees that translate principles into outcomes",
+      "Joint programmes with regional councils and partner federations",
+      "Independent advisory boards composed of distinguished members"
+    ],
+    "ctaPrimary": "Join the Consortium",
+    "ctaSecondary": "Partner With USF",
+    "diagramFooter": ["Council Tier", "Working Groups", "Regional Councils"],
+    "nodes": [
+      { "id": "gov", "label": "Governments" },
+      { "id": "ind", "label": "Industries" },
+      { "id": "aca", "label": "Universities" },
+      { "id": "ngo", "label": "NGOs" },
+      { "id": "tech", "label": "Technology" },
+      { "id": "dev", "label": "Development Partners" }
+    ]
+  },
+
+  "internationalDevelopment": {
+    "eyebrow": "International Development",
+    "heading": "Supporting Sustainable Development Worldwide",
+    "description": "Six development pillars guide the Federation's long-horizon work — operationalised through partner programmes, regional councils, and dedicated technical teams.",
+    "items": [
+      { "id": "capacity", "title": "Capacity Building", "body": "Long-term programmes that strengthen institutional capabilities across emerging and established economies." },
+      { "id": "governance", "title": "Governance Programs", "body": "Frameworks, advisory work, and peer review to advance transparent, accountable institutions." },
+      { "id": "community", "title": "Community Development", "body": "Locally rooted initiatives co-designed with civil society to deliver measurable outcomes." },
+      { "id": "institutional", "title": "Institutional Development", "body": "Modernisation pathways for public agencies, universities, and large multi-mandate organisations." },
+      { "id": "sustainability", "title": "Sustainability Initiatives", "body": "ESG, climate, and circularity programmes that turn ambition into reportable outcomes." },
+      { "id": "cooperation", "title": "International Cooperation", "body": "Bilateral and multilateral cooperation channels that move work from policy intent to programme delivery." }
+    ]
+  },
+
+  "globalPresence": {
+    "eyebrow": "Global Presence",
+    "heading": "Connecting Organisations Across Borders",
+    "description": "Building partnerships that drive standards excellence, innovation, research, education, and sustainable development globally.",
+    "atlasLabel": "Federation Atlas",
+    "atlasMeta": "7 Countries · 4 Regions",
+    "atlasLegendNode": "Federation Node",
+    "atlasLegendCorridor": "Active Corridor",
+    "countries": [
+      { "code": "USA", "name": "United States", "role": "Federation Headquarters", "region": "North America" },
+      { "code": "DEU", "name": "Germany", "role": "European Operations", "region": "Europe" },
+      { "code": "DNK", "name": "Denmark", "role": "Nordic Council", "region": "Europe" },
+      { "code": "NLD", "name": "Netherlands", "role": "Standards Liaison", "region": "Europe" },
+      { "code": "GBR", "name": "United Kingdom", "role": "Research Partners", "region": "Europe" },
+      { "code": "SGP", "name": "Singapore", "role": "Asia-Pacific Hub", "region": "Asia-Pacific" },
+      { "code": "IND", "name": "India", "role": "South Asia Hub", "region": "Asia-Pacific" }
+    ]
+  },
+
+  "leadership": {
+    "eyebrow": "Leadership",
+    "heading": "The Federation Council",
+    "description": "USF is led by a council of accomplished leaders across industry, governance, and international development — guiding the Federation's strategy and member work.",
+    "portraitLabel": "USF · Council Portrait",
+    "leaders": [
+      {
+        "id": "varsha",
+        "name": "Varsha Harle",
+        "role": "Founder",
+        "initials": "VH",
+        "bio": "Founder of the United Standards Federation, leading the institutional vision for global standards, certification, and collaboration.",
+        "region": "United States",
+        "linkedin": "#"
+      },
+      {
+        "id": "piyush",
+        "name": "Piyushkumar Rawal",
+        "role": "Secretary",
+        "initials": "PR",
+        "bio": "Secretary of the Federation, responsible for governance, council operations, and member institution relations.",
+        "region": "United States",
+        "linkedin": "#"
+      },
+      {
+        "id": "rakesh",
+        "name": "Rakesh",
+        "role": "Executive Director",
+        "initials": "RK",
+        "bio": "Executive Director overseeing Federation programmes, certification frameworks, and international development initiatives.",
+        "region": "United States",
+        "linkedin": "#"
+      },
+      {
+        "id": "dhawal",
+        "name": "Dhawal Patel",
+        "role": "Director",
+        "initials": "DP",
+        "bio": "Director leading strategic partnerships, member growth, and cross-sector collaboration across the Federation network.",
+        "region": "United States",
+        "linkedin": "#"
+      }
+    ]
+  },
+
+  "membership": {
+    "eyebrow": "Membership",
+    "heading": "Eight Benefits. One Federation.",
+    "description": "Members access a coherent set of benefits — designed for institutions that want their outcomes recognised across borders, sectors, and standards regimes.",
+    "flagshipLabel": "Flagship",
+    "benefits": [
+      { "id": "networking", "label": "Global Networking" },
+      { "id": "exposure", "label": "International Exposure" },
+      { "id": "committee", "label": "Committee Participation" },
+      { "id": "partnerships", "label": "Strategic Partnerships" },
+      { "id": "educational", "label": "Educational Collaboration" },
+      { "id": "alliances", "label": "Industry Alliances" },
+      { "id": "certification", "label": "Certification Support" },
+      { "id": "growth", "label": "Growth Opportunities" }
+    ],
+    "tiers": [
+      {
+        "id": "institutional",
+        "name": "Institutional",
+        "tag": "Organisations",
+        "description": "For corporations, agencies, universities, and NGOs joining the Federation as full institutional members.",
+        "highlights": ["Council & committee participation", "All eight federation benefits", "Co-branded programmes and convenings"],
+        "cta": "Apply for Membership"
+      },
+      {
+        "id": "affiliate",
+        "name": "Affiliate",
+        "tag": "Professional",
+        "description": "For senior professionals contributing to working groups, advisory roles, and Federation-led research.",
+        "highlights": ["Working group access", "Member-only convenings", "Certification & training pathways"],
+        "cta": "Become an Affiliate"
+      },
+      {
+        "id": "partner",
+        "name": "Partner",
+        "tag": "Strategic",
+        "description": "For governments, foundations, and partner federations entering long-term programme partnerships with USF.",
+        "highlights": ["Bilateral programme design", "Joint research & publications", "Co-hosted regional initiatives"],
+        "cta": "Partner with USF"
+      }
+    ]
+  },
+
+  "finalCta": {
+    "eyebrow": "Join the Federation",
+    "heading": "Join a Growing Global Federation",
+    "description": "Become part of a trusted international network dedicated to standards, certification, innovation, education, workforce development, technology advancement, and sustainable growth.",
+    "ctaPrimary": "Become a Member",
+    "ctaSecondary": "Contact Us",
+    "secretariat": {
+      "eyebrow": "Secretariat Office",
+      "lead": "The USF Secretariat is the first point of contact for prospective members and partners.",
+      "labels": {
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Headquarters",
+        "hours": "Hours"
+      }
+    }
+  },
+
+  "footer": {
+    "tagline": "A global federation for standards, certification, and collaboration.",
+    "description": "USF convenes governments, industries, academic institutions, and civil society to advance international standards, certification, and sustainable development.",
+    "newsletterPlaceholder": "Your work email",
+    "newsletterButton": "Subscribe",
+    "newsletterNote": "Receive Federation briefings, programme updates, and member announcements.",
+    "columns": [
+      { "title": "About USF", "links": ["The Federation", "Charter", "Council", "Governance", "Annual Report"] },
+      { "title": "Standards & Certification", "links": ["Standards Programs", "Certification", "Accreditation", "Quality Systems", "Compliance"] },
+      { "title": "Membership", "links": ["Institutional", "Affiliate", "Strategic Partner", "Benefits", "Apply Now"] },
+      { "title": "Services", "links": ["Standards & Compliance", "IT & Data", "Global Resourcing", "Research & Innovation", "Training & Education"] },
+      { "title": "Global Consortium", "links": ["Governments", "Industries", "Academia", "NGOs", "Development Partners"] },
+      { "title": "News & Contact", "links": ["News & Publications", "Insights", "Events", "Press Room", "Contact"] }
+    ],
+    "legalLinks": ["Privacy Notice", "Terms of Use", "Code of Conduct", "Accessibility"]
+  }
+}

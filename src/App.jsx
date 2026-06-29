@@ -1,41 +1,74 @@
-import Navbar from './components/Navbar.jsx';
-import Hero from './components/Hero.jsx';
-import GlobalStats from './components/GlobalStats.jsx';
-import Ecosystem from './components/Ecosystem.jsx';
-import About from './components/About.jsx';
-import MissionVision from './components/MissionVision.jsx';
-import Services from './components/Services.jsx';
-import WhyJoin from './components/WhyJoin.jsx';
-import Industries from './components/Industries.jsx';
-import GlobalConsortium from './components/GlobalConsortium.jsx';
-import InternationalDevelopment from './components/InternationalDevelopment.jsx';
-import GlobalPresence from './components/GlobalPresence.jsx';
-import Leadership from './components/Leadership.jsx';
-import Membership from './components/Membership.jsx';
-import FinalCTA from './components/FinalCTA.jsx';
-import Footer from './components/Footer.jsx';
+import { useEffect } from 'react';
+
+import { Routes, Route } from 'react-router-dom';
+
+import ScrollToHash from './components/ScrollToHash.jsx';
+import HomePage from './pages/HomePage.jsx';
+import ServicesPage from './pages/ServicesPage.jsx';
+import GlobalResourcingPage from './pages/GlobalResourcingPage.jsx';
+import ServiceDetailPage from './pages/ServiceDetailPage.jsx';
+
+import site from './content/site.json';
+
+import { usfLogo } from './config/brand.js';
+
+
 
 export default function App() {
+
+  useEffect(() => {
+
+    if (site.site?.metaTitle) {
+
+      document.title = site.site.metaTitle;
+
+    }
+
+    if (site.site?.metaDescription) {
+
+      let meta = document.querySelector('meta[name="description"]');
+
+      if (!meta) {
+
+        meta = document.createElement('meta');
+
+        meta.setAttribute('name', 'description');
+
+        document.head.appendChild(meta);
+
+      }
+
+      meta.setAttribute('content', site.site.metaDescription);
+
+    }
+
+    const icon = document.querySelector('link[rel="icon"]');
+
+    if (icon) icon.setAttribute('href', usfLogo);
+
+  }, []);
+
+
+
   return (
-    <div className="min-h-screen bg-white text-usf-text">
-      <Navbar />
-      <main>
-        <Hero />
-        <GlobalStats />
-        <Ecosystem />
-        <About />
-        <MissionVision />
-        <Services />
-        <WhyJoin />
-        <Industries />
-        <GlobalConsortium />
-        <InternationalDevelopment />
-        <GlobalPresence />
-        <Leadership />
-        <Membership />
-        <FinalCTA />
-      </main>
-      <Footer />
-    </div>
+
+    <>
+
+      <ScrollToHash />
+
+      <Routes>
+
+        <Route path="/" element={<HomePage />} />
+
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/services/resourcing" element={<GlobalResourcingPage />} />
+        <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
+
+      </Routes>
+
+    </>
+
   );
+
 }
+

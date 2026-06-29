@@ -7,54 +7,33 @@ import {
   Network,
   TrendingUp,
 } from 'lucide-react';
+import site from '../content/site.json';
 
-const BENEFITS = [
-  {
-    icon: Globe,
-    title: 'Global Recognition',
-    body: 'Be associated with a Federation that signals rigour, governance, and international credibility.',
-  },
-  {
-    icon: Eye,
-    title: 'International Visibility',
-    body: 'Reach decision-makers, peer institutions, and prospective partners across 25+ countries.',
-  },
-  {
-    icon: Handshake,
-    title: 'Strategic Partnerships',
-    body: 'Move from transactional outreach to long-term alliances with industry, academia, and government.',
-  },
-  {
-    icon: ScrollText,
-    title: 'Standards Guidance',
-    body: 'Direct access to working groups, frameworks, and advisory services that shape your standards journey.',
-  },
-  {
-    icon: Network,
-    title: 'Industry Networking',
-    body: 'Closed-door forums, committee tables, and curated convenings across sectors and regions.',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Growth Opportunities',
-    body: 'Pathways into new markets, talent pools, and collaborative R&D programmes.',
-  },
-];
+const ICON_BY_ID = {
+  recognition: Globe,
+  visibility: Eye,
+  partnerships: Handshake,
+  standards: ScrollText,
+  networking: Network,
+  growth: TrendingUp,
+};
+
+const BENEFITS = site.whyJoin.items.map((b) => ({
+  ...b,
+  icon: ICON_BY_ID[b.id] || Globe,
+}));
 
 export default function WhyJoin() {
   return (
-    <section className="bg-usf-gray/60 py-24 md:py-32">
+    <section className="section-pad bg-usf-gray/60">
       <div className="container-usf">
         <div className="grid items-end gap-8 md:grid-cols-2">
           <div>
-            <span className="eyebrow">Member Value</span>
-            <h2 className="display-h2 mt-6 max-w-xl text-usf-blue">
-              Why Organisations Join USF
-            </h2>
+            <span className="eyebrow">{site.whyJoin.eyebrow}</span>
+            <h2 className="display-h2 mt-6 max-w-xl text-usf-blue">{site.whyJoin.heading}</h2>
           </div>
           <p className="max-w-md justify-self-start text-[15.5px] leading-[1.8] text-usf-muted md:justify-self-end md:text-right">
-            Federation membership is built around six durable advantages — each backed by formal
-            programmes, working groups, and partner institutions.
+            {site.whyJoin.description}
           </p>
         </div>
 
@@ -68,7 +47,7 @@ export default function WhyJoin() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.55, delay: (i % 3) * 0.08, ease: 'easeOut' }}
-                className="group relative bg-white p-9 transition-colors duration-500 hover:bg-usf-blue hover:text-white"
+                className="group relative bg-white p-6 transition-colors duration-500 hover:bg-usf-blue hover:text-white sm:p-7 md:p-9"
               >
                 <span className="absolute right-7 top-7 text-[11px] font-semibold uppercase tracking-eyebrow text-usf-muted/70 group-hover:text-white/45">
                   0{i + 1}

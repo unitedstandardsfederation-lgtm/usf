@@ -7,53 +7,32 @@ import {
   Leaf,
   Globe2,
 } from 'lucide-react';
+import site from '../content/site.json';
 
-const PILLARS = [
-  {
-    icon: Building,
-    title: 'Capacity Building',
-    body: 'Long-term programmes that strengthen institutional capabilities across emerging and established economies.',
-  },
-  {
-    icon: Scale,
-    title: 'Governance Programs',
-    body: 'Frameworks, advisory work, and peer review to advance transparent, accountable institutions.',
-  },
-  {
-    icon: Users,
-    title: 'Community Development',
-    body: 'Locally rooted initiatives co-designed with civil society to deliver measurable outcomes.',
-  },
-  {
-    icon: Building2,
-    title: 'Institutional Development',
-    body: 'Modernisation pathways for public agencies, universities, and large multi-mandate organisations.',
-  },
-  {
-    icon: Leaf,
-    title: 'Sustainability Initiatives',
-    body: 'ESG, climate, and circularity programmes that turn ambition into reportable outcomes.',
-  },
-  {
-    icon: Globe2,
-    title: 'International Cooperation',
-    body: 'Bilateral and multilateral cooperation channels that move work from policy intent to programme delivery.',
-  },
-];
+const ICON_BY_ID = {
+  capacity: Building,
+  governance: Scale,
+  community: Users,
+  institutional: Building2,
+  sustainability: Leaf,
+  cooperation: Globe2,
+};
+
+const PILLARS = site.internationalDevelopment.items.map((p) => ({
+  ...p,
+  icon: ICON_BY_ID[p.id] || Building,
+}));
 
 export default function InternationalDevelopment() {
   return (
-    <section className="bg-white py-24 md:py-32">
+    <section className="section-pad bg-white">
       <div className="container-usf">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="eyebrow justify-center">International Development</span>
+          <span className="eyebrow justify-center">{site.internationalDevelopment.eyebrow}</span>
           <h2 className="display-h2 mt-6 text-usf-blue">
-            Supporting Sustainable Development Worldwide
+            {site.internationalDevelopment.heading}
           </h2>
-          <p className="lead mt-6">
-            Six development pillars guide the Federation&apos;s long-horizon work — operationalised
-            through partner programmes, regional councils, and dedicated technical teams.
-          </p>
+          <p className="lead mt-6">{site.internationalDevelopment.description}</p>
           <div className="mx-auto mt-8 h-[3px] w-12 bg-usf-red" />
         </div>
 

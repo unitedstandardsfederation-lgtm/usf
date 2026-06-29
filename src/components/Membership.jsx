@@ -10,78 +10,44 @@ import {
   BadgeCheck,
   TrendingUp,
 } from 'lucide-react';
+import site from '../content/site.json';
 
-const BENEFITS = [
-  { icon: Globe2, label: 'Global Networking' },
-  { icon: Eye, label: 'International Exposure' },
-  { icon: Vote, label: 'Committee Participation' },
-  { icon: Handshake, label: 'Strategic Partnerships' },
-  { icon: GraduationCap, label: 'Educational Collaboration' },
-  { icon: Network, label: 'Industry Alliances' },
-  { icon: BadgeCheck, label: 'Certification Support' },
-  { icon: TrendingUp, label: 'Growth Opportunities' },
-];
+const ICON_BY_ID = {
+  networking: Globe2,
+  exposure: Eye,
+  committee: Vote,
+  partnerships: Handshake,
+  educational: GraduationCap,
+  alliances: Network,
+  certification: BadgeCheck,
+  growth: TrendingUp,
+};
 
-const TIERS = [
-  {
-    name: 'Institutional',
-    tag: 'Organisations',
-    description:
-      'For corporations, agencies, universities, and NGOs joining the Federation as full institutional members.',
-    highlights: [
-      'Council & committee participation',
-      'All eight federation benefits',
-      'Co-branded programmes and convenings',
-    ],
-    cta: 'Apply for Membership',
-  },
-  {
-    name: 'Affiliate',
-    tag: 'Professional',
-    description:
-      'For senior professionals contributing to working groups, advisory roles, and Federation-led research.',
-    highlights: [
-      'Working group access',
-      'Member-only convenings',
-      'Certification & training pathways',
-    ],
-    cta: 'Become an Affiliate',
-  },
-  {
-    name: 'Partner',
-    tag: 'Strategic',
-    description:
-      'For governments, foundations, and partner federations entering long-term programme partnerships with USF.',
-    highlights: [
-      'Bilateral programme design',
-      'Joint research & publications',
-      'Co-hosted regional initiatives',
-    ],
-    cta: 'Partner with USF',
-  },
-];
+const BENEFITS = site.membership.benefits.map((b) => ({
+  ...b,
+  icon: ICON_BY_ID[b.id] || Globe2,
+}));
+
+const TIERS = site.membership.tiers;
 
 export default function Membership() {
   return (
-    <section id="membership" className="relative overflow-hidden bg-usf-gray/60 py-24 md:py-32">
+    <section id="membership" className="section-pad relative overflow-hidden bg-usf-gray/60">
       <div className="container-usf">
         <div className="grid items-end gap-8 border-b border-usf-blue/10 pb-10 md:grid-cols-12">
           <div className="md:col-span-7">
-            <span className="eyebrow">Membership</span>
-            <h2 className="display-h2 mt-6 text-usf-blue">
-              Eight Benefits. One Federation.
-            </h2>
+            <span className="eyebrow">{site.membership.eyebrow}</span>
+            <h2 className="display-h2 mt-6 text-usf-blue">{site.membership.heading}</h2>
           </div>
           <div className="md:col-span-5">
             <p className="text-[15.5px] leading-[1.8] text-usf-muted">
-              Members access a coherent set of benefits — designed for institutions that want their
-              outcomes recognised across borders, sectors, and standards regimes.
+              {site.membership.description}
             </p>
           </div>
         </div>
 
         {/* Eight benefit chips */}
-        <div className="grid grid-cols-2 gap-px border border-usf-blue/10 bg-usf-blue/10 sm:grid-cols-4">
+        <div className="grid grid-cols-1 gap-px border border-usf-blue/10 bg-usf-blue/10 sm:grid-cols-2 md:grid-cols-4">
           {BENEFITS.map((b, i) => {
             const Icon = b.icon;
             return (
@@ -91,12 +57,12 @@ export default function Membership() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: (i % 4) * 0.05 }}
-                className="group flex items-center gap-4 bg-white px-6 py-5 transition-colors hover:bg-usf-blue hover:text-white"
+                className="group flex items-center gap-3 bg-white px-4 py-4 transition-colors hover:bg-usf-blue hover:text-white sm:gap-4 sm:px-6 sm:py-5"
               >
                 <div className="flex h-10 w-10 flex-none items-center justify-center border border-usf-blue/15 text-usf-blue transition-colors group-hover:border-usf-red group-hover:bg-usf-red group-hover:text-white">
                   <Icon className="h-4 w-4" strokeWidth={1.6} />
                 </div>
-                <div className="text-[13.5px] font-semibold text-usf-blue group-hover:text-white">
+                <div className="text-[12.5px] font-semibold text-usf-blue group-hover:text-white sm:text-[13.5px]">
                   {b.label}
                 </div>
               </motion.div>
@@ -113,15 +79,15 @@ export default function Membership() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
-              className={`relative flex h-full flex-col border bg-white p-10 transition-shadow duration-500 ${
+              className={`relative flex h-full flex-col border p-6 transition-shadow duration-500 sm:p-8 md:p-10 ${
                 i === 0
                   ? 'border-usf-blue bg-usf-blue text-white'
-                  : 'border-usf-blue/10 hover:shadow-card-hover'
+                  : 'border-usf-blue/10 bg-white hover:shadow-card-hover'
               }`}
             >
               {i === 0 && (
-                <span className="absolute right-8 top-8 inline-flex items-center bg-usf-red px-2.5 py-1 text-[10px] font-semibold uppercase tracking-eyebrow text-white">
-                  Flagship
+                <span className="absolute right-5 top-5 inline-flex items-center bg-usf-red px-2.5 py-1 text-[10px] font-semibold uppercase tracking-eyebrow text-white sm:right-8 sm:top-8">
+                  {site.membership.flagshipLabel}
                 </span>
               )}
               <div
@@ -132,7 +98,7 @@ export default function Membership() {
                 {t.tag}
               </div>
               <h3
-                className={`mt-3 font-display text-[28px] leading-[1.15] ${
+                className={`mt-3 font-display text-[24px] leading-[1.15] sm:text-[28px] ${
                   i === 0 ? 'text-white' : 'text-usf-blue'
                 }`}
               >

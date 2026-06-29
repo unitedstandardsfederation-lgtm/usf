@@ -1,31 +1,21 @@
 import { motion } from 'framer-motion';
 import WorldMap from './WorldMap.jsx';
+import site from '../content/site.json';
 
-const COUNTRIES = [
-  { code: 'USA', name: 'United States', role: 'Federation Headquarters', region: 'North America' },
-  { code: 'DEU', name: 'Germany', role: 'European Operations', region: 'Europe' },
-  { code: 'DNK', name: 'Denmark', role: 'Nordic Council', region: 'Europe' },
-  { code: 'NLD', name: 'Netherlands', role: 'Standards Liaison', region: 'Europe' },
-  { code: 'GBR', name: 'United Kingdom', role: 'Research Partners', region: 'Europe' },
-  { code: 'SGP', name: 'Singapore', role: 'Asia-Pacific Hub', region: 'Asia-Pacific' },
-  { code: 'IND', name: 'India', role: 'South Asia Hub', region: 'Asia-Pacific' },
-];
+const COUNTRIES = site.globalPresence.countries;
 
 export default function GlobalPresence() {
   return (
-    <section className="bg-usf-gray/60 py-24 md:py-32">
+    <section className="section-pad bg-usf-gray/60">
       <div className="container-usf">
         <div className="grid items-end gap-8 border-b border-usf-blue/10 pb-10 md:grid-cols-12">
           <div className="md:col-span-7">
-            <span className="eyebrow">Global Presence</span>
-            <h2 className="display-h2 mt-6 text-usf-blue">
-              Connecting Organisations Across Borders
-            </h2>
+            <span className="eyebrow">{site.globalPresence.eyebrow}</span>
+            <h2 className="display-h2 mt-6 text-usf-blue">{site.globalPresence.heading}</h2>
           </div>
           <div className="md:col-span-5">
             <p className="text-[15.5px] leading-[1.8] text-usf-muted">
-              Building partnerships that drive standards excellence, innovation, research,
-              education, and sustainable development globally.
+              {site.globalPresence.description}
             </p>
           </div>
         </div>
@@ -39,23 +29,25 @@ export default function GlobalPresence() {
             className="relative lg:col-span-8"
           >
             <div className="relative overflow-hidden border border-usf-blue/10 bg-white">
-              <div className="absolute left-6 top-6 z-10 flex items-center gap-3 text-[10.5px] font-semibold uppercase tracking-eyebrow text-usf-blue">
-                <span className="h-px w-8 bg-usf-red" />
-                Federation Atlas
-              </div>
-              <div className="absolute right-6 top-6 z-10 text-[10.5px] font-semibold uppercase tracking-eyebrow text-usf-muted">
-                7 Countries · 4 Regions
+              <div className="flex flex-col gap-2 border-b border-usf-blue/10 bg-usf-gray/40 px-4 py-3 sm:absolute sm:left-6 sm:top-6 sm:z-10 sm:flex-row sm:items-center sm:gap-3 sm:border-0 sm:bg-transparent sm:p-0">
+                <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-eyebrow text-usf-blue sm:gap-3 sm:text-[10.5px]">
+                  <span className="h-px w-6 bg-usf-red sm:w-8" />
+                  {site.globalPresence.atlasLabel}
+                </div>
+                <div className="text-[10px] font-semibold uppercase tracking-eyebrow text-usf-muted sm:text-[10.5px]">
+                  {site.globalPresence.atlasMeta}
+                </div>
               </div>
               <WorldMap
-                className="block h-auto w-full"
+                className="block h-auto w-full pt-0 sm:pt-10"
                 variant="light"
                 showLabels
                 showLines
                 showPulses
               />
-              <div className="border-t border-usf-blue/10 bg-usf-gray/60 px-6 py-4 text-[11.5px] uppercase tracking-eyebrow text-usf-muted">
-                <span className="text-usf-red">●</span> Federation Node ·{' '}
-                <span className="ml-2">— Active Corridor</span>
+              <div className="border-t border-usf-blue/10 bg-usf-gray/60 px-4 py-3 text-[10px] uppercase tracking-eyebrow text-usf-muted sm:px-6 sm:py-4 sm:text-[11.5px]">
+                <span className="text-usf-red">●</span> {site.globalPresence.atlasLegendNode} ·{' '}
+                <span className="ml-2">— {site.globalPresence.atlasLegendCorridor}</span>
               </div>
             </div>
           </motion.div>
@@ -69,11 +61,11 @@ export default function GlobalPresence() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.4 }}
                   transition={{ duration: 0.5, delay: i * 0.05 }}
-                  className="group relative py-5 pl-6 pr-3 transition-colors hover:bg-white"
+                  className="group relative py-4 pl-5 pr-2 transition-colors hover:bg-white sm:py-5 sm:pl-6 sm:pr-3"
                 >
                   <span className="absolute -left-[5px] top-7 h-2.5 w-2.5 rounded-full border border-usf-blue/20 bg-white transition-colors group-hover:border-usf-red group-hover:bg-usf-red" />
                   <div className="flex items-baseline justify-between gap-3">
-                    <h3 className="font-display text-[20px] leading-[1.2] text-usf-blue">
+                    <h3 className="font-display text-[17px] leading-[1.2] text-usf-blue sm:text-[20px]">
                       {c.name}
                     </h3>
                     <span className="text-[10.5px] font-semibold uppercase tracking-eyebrow text-usf-muted">
