@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Navbar from '../components/Navbar.jsx';
 import Hero from '../components/Hero.jsx';
 import GlobalStats from '../components/GlobalStats.jsx';
@@ -14,8 +15,18 @@ import Leadership from '../components/Leadership.jsx';
 import Membership from '../components/Membership.jsx';
 import FinalCTA from '../components/FinalCTA.jsx';
 import Footer from '../components/Footer.jsx';
+import site from '../content/site.json';
+import { applySeo } from '../utils/seo.js';
 
 export default function HomePage() {
+  useEffect(() => {
+    applySeo({
+      title: site.site.metaTitle,
+      description: site.site.metaDescription,
+      path: '/',
+    });
+  }, []);
+
   return (
     <div className="min-h-screen overflow-x-clip bg-white text-usf-text">
       <Navbar />

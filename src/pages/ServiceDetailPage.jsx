@@ -1,13 +1,41 @@
+import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';
 import site from '../content/site.json';
+import { applySeo, buildServiceSchema } from '../utils/seo.js';
 
 export default function ServiceDetailPage() {
   const { serviceId } = useParams();
   const service = site.services.items.find((s) => s.id === serviceId);
   const detail = site.services.detailPage;
+
+  useEffect(() => {
+    if (!service) {
+      applySeo({
+        title: `${detail.notFoundTitle} | ${site.site.name}`,
+        description: detail.notFoundBody,
+        path: '/services',
+      });
+      return;
+    }
+
+    const path = service.href === '/services' ? '/services' : service.href;
+    applySeo({
+      title: `${service.title} | ${site.site.name}`,
+      description: service.summary,
+      path,
+      jsonLd: [
+        buildServiceSchema({
+          title: service.title,
+          description: service.summary,
+          path,
+          services: service.items,
+        }),
+      ],
+    });
+  }, [detail.notFoundBody, detail.notFoundTitle, service]);
 
   if (!service) {
     return (

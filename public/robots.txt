@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://usf-fs4.pages.dev/sitemap.xml

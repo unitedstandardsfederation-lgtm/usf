@@ -128,6 +128,17 @@ export default function Footer() {
             ))}
           </div>
         </div>
+        <div className="container-usf border-t border-white/10 pb-6 pt-4 text-center text-[12px] text-white/45">
+          {site.footer.developedByPrefix}{' '}
+          <a
+            href={site.footer.developedByHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/70 transition-colors hover:text-white"
+          >
+            {site.footer.developedByLabel}
+          </a>
+        </div>
       </div>
     </footer>
   );

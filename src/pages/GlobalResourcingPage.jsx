@@ -27,6 +27,7 @@ import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';
 import WorldMap from '../components/WorldMap.jsx';
 import site from '../content/site.json';
+import { applySeo, buildServiceSchema } from '../utils/seo.js';
 
 const page = site.globalResourcing;
 
@@ -107,14 +108,19 @@ export default function GlobalResourcingPage() {
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = page.metaTitle;
-    let meta = document.querySelector('meta[name="description"]');
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute('name', 'description');
-      document.head.appendChild(meta);
-    }
-    meta.setAttribute('content', page.metaDescription);
+    applySeo({
+      title: page.metaTitle,
+      description: page.metaDescription,
+      path: '/services/resourcing',
+      jsonLd: [
+        buildServiceSchema({
+          title: page.metaTitle,
+          description: page.metaDescription,
+          path: '/services/resourcing',
+          services: page.hero.servicePillars,
+        }),
+      ],
+    });
     window.scrollTo(0, 0);
   }, []);
 

@@ -5,6 +5,8 @@ import {
   ArrowRight,
   BarChart3,
   ChevronDown,
+  Cpu,
+  Database,
   Globe2,
   Handshake,
   Layers,
@@ -13,10 +15,12 @@ import {
   ShieldCheck,
   Smartphone,
   Sparkles,
+  Users,
 } from 'lucide-react';
 import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';
 import site from '../content/site.json';
+import { applySeo, buildServiceSchema } from '../utils/seo.js';
 
 const page = site.servicesPage;
 
@@ -162,16 +166,206 @@ function ServiceBlock({ service, index }) {
   );
 }
 
+const HERO_HUB = { x: 150, y: 215, Icon: Cpu };
+
+const HERO_INPUTS = [
+  { id: 'data', x: 44, y: 150, Icon: Database },
+  { id: 'teams', x: 44, y: 280, Icon: Users },
+];
+
+const HERO_OUTPUTS = [
+  { id: 'web', x: 372, y: 56, Icon: LayoutTemplate },
+  { id: 'app', x: 372, y: 120, Icon: Smartphone },
+  { id: 'uiux', x: 372, y: 184, Icon: PenTool },
+  { id: 'erp', x: 372, y: 248, Icon: Layers },
+  { id: 'ai', x: 372, y: 312, Icon: Sparkles },
+  { id: 'data-out', x: 372, y: 376, Icon: BarChart3 },
+];
+
+function heroEdgePath(a, b) {
+  const mx = (a.x + b.x) / 2;
+  return `M ${a.x} ${a.y} C ${mx} ${a.y} ${mx} ${b.y} ${b.x} ${b.y}`;
+}
+
+const HERO_EDGES = [
+  ...HERO_INPUTS.map((node) => ({ id: `in-${node.id}`, from: node, to: HERO_HUB })),
+  ...HERO_OUTPUTS.map((node) => ({ id: `out-${node.id}`, from: HERO_HUB, to: node })),
+];
+
+function HeroNode({ x, y, r, Icon, accent }) {
+  const iconSize = r >= 24 ? 26 : 18;
+  return (
+    <g>
+      <circle
+        cx={x}
+        cy={y}
+        r={r + 6}
+        fill="none"
+        stroke={accent ? 'rgba(214,20,27,0.45)' : 'rgba(255,255,255,0.16)'}
+        strokeWidth="1"
+      >
+        <animate
+          attributeName="r"
+          values={`${r + 4};${r + 12};${r + 4}`}
+          dur="3.2s"
+          repeatCount="indefinite"
+        />
+        <animate
+          attributeName="opacity"
+          values="0.6;0;0.6"
+          dur="3.2s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle
+        cx={x}
+        cy={y}
+        r={r}
+        fill={accent ? 'rgba(214,20,27,0.16)' : 'rgba(255,255,255,0.06)'}
+        stroke={accent ? 'rgba(214,20,27,0.8)' : 'rgba(255,255,255,0.28)'}
+        strokeWidth="1.2"
+      />
+      <foreignObject x={x - iconSize / 2} y={y - iconSize / 2} width={iconSize} height={iconSize}>
+        <div className="flex h-full w-full items-center justify-center">
+          <Icon
+            className={accent ? 'text-white' : 'text-white/75'}
+            style={{ width: iconSize, height: iconSize }}
+            strokeWidth={1.6}
+          />
+        </div>
+      </foreignObject>
+    </g>
+  );
+}
+
+function TechHeroVisual() {
+  return (
+    <div className="pointer-events-none relative hidden opacity-85 lg:block" aria-hidden="true">
+      <div className="relative mx-auto w-[440px] max-w-full overflow-hidden rounded-xl border border-white/12 bg-white/[0.04] shadow-[0_30px_80px_-40px_rgba(0,0,0,0.9)] backdrop-blur-sm">
+        <div className="flex items-center gap-2 border-b border-white/10 bg-white/[0.05] px-4 py-3">
+          <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
+          <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
+          <span className="h-3 w-3 rounded-full bg-[#28c840]" />
+          <span className="ml-3 h-2 w-32 rounded-full bg-white/10" />
+        </div>
+
+        <svg viewBox="0 0 430 430" className="relative h-auto w-full p-5" fill="none">
+          {HERO_EDGES.map((edge) => (
+              <path
+                key={edge.id}
+                id={`hero-edge-${edge.id}`}
+                d={heroEdgePath(edge.from, edge.to)}
+                fill="none"
+                stroke="rgba(255,255,255,0.18)"
+                strokeWidth="1.4"
+              />
+            ))}
+
+            {HERO_EDGES.map((edge, index) => (
+              <circle key={`dot-${edge.id}`} r="3.2" fill="#D6141B">
+                <animateMotion
+                  dur="2.6s"
+                  begin={`${index * 0.32}s`}
+                  repeatCount="indefinite"
+                  keyPoints="0;1"
+                  keyTimes="0;1"
+                  calcMode="linear"
+                >
+                  <mpath href={`#hero-edge-${edge.id}`} />
+                </animateMotion>
+                <animate
+                  attributeName="opacity"
+                  values="0;1;1;0"
+                  keyTimes="0;0.1;0.9;1"
+                  dur="2.6s"
+                  begin={`${index * 0.32}s`}
+                  repeatCount="indefinite"
+                />
+              </circle>
+            ))}
+
+            {HERO_INPUTS.map((node) => (
+              <HeroNode key={node.id} x={node.x} y={node.y} r={17} Icon={node.Icon} />
+            ))}
+          <HeroNode x={HERO_HUB.x} y={HERO_HUB.y} r={28} Icon={HERO_HUB.Icon} accent />
+          {HERO_OUTPUTS.map((node) => (
+            <HeroNode key={node.id} x={node.x} y={node.y} r={17} Icon={node.Icon} />
+          ))}
+        </svg>
+      </div>
+    </div>
+  );
+}
+
+function TechHeroVisualMobile() {
+  return (
+    <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden lg:hidden" aria-hidden="true">
+      <svg
+        viewBox="0 0 430 430"
+        className="absolute right-[-140px] top-[-36px] h-[360px] w-[360px] opacity-[0.18]"
+        fill="none"
+      >
+        {HERO_EDGES.map((edge) => (
+          <path
+            key={`m-${edge.id}`}
+            id={`hero-edge-mobile-${edge.id}`}
+            d={heroEdgePath(edge.from, edge.to)}
+            fill="none"
+            stroke="rgba(255,255,255,0.24)"
+            strokeWidth="1.5"
+          />
+        ))}
+
+        {HERO_EDGES.map((edge, index) => (
+          <circle key={`m-dot-${edge.id}`} r="2.6" fill="#D6141B">
+            <animateMotion
+              dur="3s"
+              begin={`${index * 0.36}s`}
+              repeatCount="indefinite"
+              keyPoints="0;1"
+              keyTimes="0;1"
+              calcMode="linear"
+            >
+              <mpath href={`#hero-edge-mobile-${edge.id}`} />
+            </animateMotion>
+            <animate
+              attributeName="opacity"
+              values="0;1;1;0"
+              keyTimes="0;0.1;0.9;1"
+              dur="3s"
+              begin={`${index * 0.36}s`}
+              repeatCount="indefinite"
+            />
+          </circle>
+        ))}
+
+        {HERO_INPUTS.map((node) => (
+          <HeroNode key={`m-${node.id}`} x={node.x} y={node.y} r={16} Icon={node.Icon} />
+        ))}
+        <HeroNode x={HERO_HUB.x} y={HERO_HUB.y} r={24} Icon={HERO_HUB.Icon} accent />
+        {HERO_OUTPUTS.map((node) => (
+          <HeroNode key={`m-out-${node.id}`} x={node.x} y={node.y} r={16} Icon={node.Icon} />
+        ))}
+      </svg>
+    </div>
+  );
+}
+
 export default function ServicesPage() {
   useEffect(() => {
-    document.title = page.metaTitle;
-    let meta = document.querySelector('meta[name="description"]');
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute('name', 'description');
-      document.head.appendChild(meta);
-    }
-    meta.setAttribute('content', page.metaDescription);
+    applySeo({
+      title: page.metaTitle,
+      description: page.metaDescription,
+      path: '/services',
+      jsonLd: [
+        buildServiceSchema({
+          title: page.metaTitle,
+          description: page.metaDescription,
+          path: '/services',
+          services: page.services.map((service) => service.eyebrow),
+        }),
+      ],
+    });
     window.scrollTo(0, 0);
   }, []);
 
@@ -198,36 +392,41 @@ export default function ServicesPage() {
         />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-usf-blue-dark to-transparent" />
 
-        <div className="container-usf relative py-12 sm:py-16 md:py-24 lg:py-28">
-          <motion.span {...fadeUp} className="eyebrow-light">
-            {page.hero.eyebrow}
-          </motion.span>
-          <motion.h1
-            {...fadeUp}
-            transition={{ ...fadeUp.transition, delay: 0.08 }}
-            className="display-h1 mt-6 max-w-4xl text-white"
-          >
-            {page.hero.headline}
-          </motion.h1>
-          <motion.p
-            {...fadeUp}
-            transition={{ ...fadeUp.transition, delay: 0.14 }}
-            className="mt-7 max-w-3xl text-[15.5px] leading-[1.85] text-white/78 sm:text-[16.5px] md:text-[17px]"
-          >
-            {page.hero.description}
-          </motion.p>
-          <motion.div
-            {...fadeUp}
-            transition={{ ...fadeUp.transition, delay: 0.22 }}
-            className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4"
-          >
-            <Link to={page.hero.ctaPrimaryHref} className="btn-red">
-              {page.hero.ctaPrimary} <ArrowRight className="h-4 w-4" />
-            </Link>
-            <a href={page.hero.ctaSecondaryHref} className="btn-ghost-light">
-              {page.hero.ctaSecondary} <ChevronDown className="h-4 w-4" />
-            </a>
-          </motion.div>
+        <div className="container-usf relative grid items-center gap-12 py-12 sm:py-16 md:py-24 lg:grid-cols-[minmax(0,1fr)_430px] lg:py-28">
+          <div className="relative isolate">
+            <TechHeroVisualMobile />
+            <motion.span {...fadeUp} className="eyebrow-light">
+              {page.hero.eyebrow}
+            </motion.span>
+            <motion.h1
+              {...fadeUp}
+              transition={{ ...fadeUp.transition, delay: 0.08 }}
+              className="display-h1 mt-6 max-w-4xl text-white"
+            >
+              {page.hero.headline}
+            </motion.h1>
+            <motion.p
+              {...fadeUp}
+              transition={{ ...fadeUp.transition, delay: 0.14 }}
+              className="mt-7 max-w-3xl text-[15.5px] leading-[1.85] text-white/84 sm:text-[16.5px] md:text-[17px]"
+            >
+              {page.hero.description}
+            </motion.p>
+            <motion.div
+              {...fadeUp}
+              transition={{ ...fadeUp.transition, delay: 0.22 }}
+              className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4"
+            >
+              <Link to={page.hero.ctaPrimaryHref} className="btn-red">
+                {page.hero.ctaPrimary} <ArrowRight className="h-4 w-4" />
+              </Link>
+              <a href={page.hero.ctaSecondaryHref} className="btn-ghost-light">
+                {page.hero.ctaSecondary} <ChevronDown className="h-4 w-4" />
+              </a>
+            </motion.div>
+          </div>
+
+          <TechHeroVisual />
         </div>
       </header>
 

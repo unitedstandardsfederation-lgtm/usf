@@ -79,8 +79,8 @@ export default function GlobalStats() {
               {QUALITATIVE.map((q) => (
                 <div key={q.label} className="flex items-center gap-3 text-[12.5px] text-usf-text">
                   <span className="inline-flex h-1.5 w-1.5 rounded-full bg-usf-red" />
+                  <span className="font-semibold text-usf-blue">{q.value}</span>
                   <span className="font-medium">{q.label}</span>
-                  <span className="text-usf-muted">— {q.value}</span>
                 </div>
               ))}
             </div>

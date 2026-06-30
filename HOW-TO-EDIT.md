@@ -17,11 +17,11 @@ rebuilds and goes live within about 30–60 seconds.
 
 | What you want to change                   | Where to look in `site.json` |
 | ----------------------------------------- | ---------------------------- |
-| Site name, meta description, copyright    | `site`                       |
+| Site name, SEO/social/AI search settings, copyright | `site`             |
 | Email, phone, address, office hours       | `contact`                    |
 | Top menu items, "Become a Member" label   | `nav`                        |
 | Hero headline, description, buttons       | `hero`                       |
-| Statistics under the hero (25+, 100+ …)   | `stats`                      |
+| Statistics under the hero (7+, 24+ …)     | `stats`                      |
 | Four ecosystem cards (Industry, Edu, …)   | `ecosystem`                  |
 | About USF — paragraphs, pull quote, facts | `about`                      |
 | Mission & Vision statements               | `missionVision`              |
@@ -39,11 +39,27 @@ rebuilds and goes live within about 30–60 seconds.
 
 ---
 
+## SEO, Google, social sharing, and AI discovery
+
+The main SEO fields live near the top of `site.json` inside `site`:
+
+- `metaTitle` controls the browser title and Google result title.
+- `metaDescription` controls the Google/social preview description.
+- `siteUrl` should be the live website URL.
+- `seo.keywords` lists search phrases related to USF services.
+- `seo.aiSummary` and `seo.searchIntents` help generate the AI-friendly `llms.txt` file.
+- `seo.ogImage` controls the default image used when the site is shared on social media.
+
+After editing these fields, Cloudflare Pages rebuilds and regenerates `sitemap.xml`,
+`robots.txt`, social meta tags, structured data, and `llms.txt`.
+
+---
+
 ## How to make an edit (the easy way — using GitHub in your browser)
 
 ### Step 1 — Open the file
 
-1. Go to your repository on GitHub (`https://github.com/higleemy-gif/usf`).
+1. Go to your repository on GitHub (`https://github.com/unitedstandardsfederation-lgtm/usf`).
 2. Click into the folder `src/`, then `content/`.
 3. Click on `site.json`.
 

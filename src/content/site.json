@@ -2,8 +2,44 @@
   "site": {
     "name": "United Standards Federation",
     "shortName": "USF",
-    "metaTitle": "United Standards Federation (USF) — Building Global Synergy Through Standards, Collaboration & Growth",
-    "metaDescription": "United Standards Federation (USF) - A USA-based global federation advancing international standards, certification, education, innovation, and sustainable growth.",
+    "siteUrl": "https://usf-fs4.pages.dev",
+    "metaTitle": "United Standards Federation (USF) | Global Standards, Certification, Digital Services & Collaboration",
+    "metaDescription": "United Standards Federation (USF) helps organizations improve standards, certification, digital transformation, ERP, CRM, UI/UX, AI automation, global resourcing, and international collaboration across 7+ countries.",
+    "seo": {
+      "keywords": [
+        "United Standards Federation",
+        "USF",
+        "global standards federation",
+        "international standards",
+        "certification and accreditation",
+        "standards compliance",
+        "digital services",
+        "website development",
+        "UI UX design",
+        "ERP services",
+        "CRM services",
+        "AI automation",
+        "data analytics",
+        "global resourcing",
+        "staffing and recruiting",
+        "international consortium",
+        "global trade federation"
+      ],
+      "canonicalPath": "/",
+      "ogType": "website",
+      "ogImage": "/logo/6.png",
+      "twitterCard": "summary_large_image",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "sameAs": [],
+      "aiSummary": "United Standards Federation (USF) is a USA-based global federation for standards, certification, digital transformation, ERP and CRM solutions, UI/UX design, AI automation, data analytics, global resourcing, and international collaboration.",
+      "searchIntents": [
+        "organizations seeking international standards and compliance support",
+        "companies needing certification, accreditation, and quality systems guidance",
+        "businesses looking for website development, UI/UX design, ERP, CRM, AI automation, and data analytics services",
+        "institutions seeking global staffing, recruiting, consulting, and direct hire support",
+        "governments, industries, universities, NGOs, and partners seeking global consortium collaboration"
+      ]
+    },
     "copyright": "United Standards Federation (USF). All Rights Reserved."
   },
 
@@ -16,7 +52,7 @@
 
   "nav": {
     "utility": {
-      "tagline": "An international federation · 25+ countries",
+      "tagline": "An international federation · 7+ countries",
       "newsroomLabel": "Newsroom"
     },
     "items": [
@@ -40,7 +76,7 @@
   "hero": {
     "metaLeft": "United Standards Federation",
     "metaLeftSub": "USA · International Federation",
-    "metaRight": "25+ Countries · 100+ Partners",
+    "metaRight": "7+ Countries · 10+ Consortium Organizations",
     "eyebrow": "A Global Federation for Standards & Collaboration",
     "headlineStart": "Building Global Synergy Through ",
     "headlineHighlight": "Standards",
@@ -75,16 +111,17 @@
 
   "stats": {
     "items": [
-      { "value": 25, "suffix": "+", "label": "Countries Connected", "sub": "Multi-region federation reach" },
-      { "value": 100, "suffix": "+", "label": "Strategic Partnerships", "sub": "Industry, academic, public sector" },
-      { "value": 10, "suffix": "+", "label": "Industry Sectors", "sub": "From healthcare to infrastructure" },
-      { "value": 24, "suffix": " Programs", "label": "Global Certifications", "sub": "Standards & accreditation tracks" }
+      { "value": 7, "suffix": "+", "label": "Countries", "sub": "Multi-region federation reach" },
+      { "value": 24, "suffix": "+", "label": "Global Standards", "sub": "Standards and quality frameworks" },
+      { "value": 10, "suffix": "+", "label": "Organizations in Consortium", "sub": "Members and partner institutions" },
+      { "value": 5, "suffix": "+", "label": "Investor Organizations", "sub": "Investment and growth partners" }
     ],
     "activityLabel": "Federation Activity",
     "activities": [
-      { "label": "International Collaboration Initiatives", "value": "Active" },
-      { "label": "Research & Innovation Networks", "value": "Operating" },
-      { "label": "Workforce Development Programs", "value": "Expanding" }
+      { "label": "Global Trade Federation", "value": "1" },
+      { "label": "Global Conferences a year", "value": "3+" },
+      { "label": "Global Trade meetings a year", "value": "10+" },
+      { "label": "Governments Diplomats meeting", "value": "4+" }
     ]
   },
 
@@ -151,7 +188,7 @@
   "missionVision": {
     "eyebrow": "Mandate",
     "heading": "Mission & Vision",
-    "description": "Two principles, codified in the USF charter, that anchor every programme, working group, and partnership the Federation enters.",
+    "description": "Making the world a better place with the highest human-centric ethical global standards, enabling improvements in execution, ensuring quality, safety, precision, accountability, and better outcomes for growth and sustainability.",
     "items": [
       {
         "id": "mission",
@@ -325,7 +362,7 @@
     "hero": {
       "eyebrow": "Global Resourcing Services",
       "headline": "Staffing, Recruiting, Consulting & Direct Hire—Delivered Through a Trusted Global Network",
-      "description": "United Standards Federation helps organizations find, place, and develop the people they need—whether you require flexible staffing, full-cycle recruitment, strategic workforce consulting, or permanent direct hire placements. We serve governments, corporations, healthcare systems, universities, and institutions across 25+ countries with structured, quality-driven workforce solutions.",
+      "description": "United Standards Federation helps organizations find, place, and develop the people they need—whether you require flexible staffing, full-cycle recruitment, strategic workforce consulting, or permanent direct hire placements. We serve governments, corporations, healthcare systems, universities, and institutions across 7+ countries with structured, quality-driven workforce solutions.",
       "servicePillars": ["Staffing", "Recruiting", "Consulting", "Direct Hire"],
       "ctaPrimary": "Request Workforce Consultation",
       "ctaSecondary": "Become a Workforce Partner",
@@ -634,11 +671,11 @@
 
   "servicesPage": {
     "metaTitle": "Digital Services — United Standards Federation (USF)",
-    "metaDescription": "End-to-end digital solutions — website development, UI/UX design, custom applications, ERP & CRM systems, AI & automation, and data analytics for organizations across every industry, in 25+ countries.",
+    "metaDescription": "End-to-end digital solutions — website development, UI/UX design, custom applications, ERP & CRM systems, AI & automation, and data analytics for organizations across every industry, in 7+ countries.",
     "hero": {
       "eyebrow": "Our Services",
       "headline": "End-to-End Digital Solutions for Global Organizations",
-      "description": "From UI/UX design and custom websites to ERP, CRM, and enterprise platforms — USF builds the software organizations rely on. We deliver across the full stack for every industry we serve, in 25+ countries.",
+      "description": "From UI/UX design and custom websites to ERP, CRM, and enterprise platforms — USF builds the software organizations rely on. We deliver across the full stack for every industry we serve, in 7+ countries.",
       "ctaPrimary": "Get a Free Consultation",
       "ctaSecondary": "View All Services",
       "ctaPrimaryHref": "/#contact",
@@ -762,11 +799,11 @@
       }
     ],
     "whyUsf": {
-      "heading": "Why Organizations in 25 Countries Choose USF",
+      "heading": "Why Organizations in 7+ Countries Choose USF",
       "items": [
         {
           "id": "global",
-          "stat": "25 Countries",
+          "stat": "7+ Countries",
           "title": "Global Reach",
           "body": "Serving organizations across Asia, Europe, the Americas, and beyond"
         },
@@ -859,7 +896,7 @@
     "description": "Federation membership is built around six durable advantages — each backed by formal programmes, working groups, and partner institutions.",
     "items": [
       { "id": "recognition", "title": "Global Recognition", "body": "Be associated with a Federation that signals rigour, governance, and international credibility." },
-      { "id": "visibility", "title": "International Visibility", "body": "Reach decision-makers, peer institutions, and prospective partners across 25+ countries." },
+      { "id": "visibility", "title": "International Visibility", "body": "Reach decision-makers, peer institutions, and prospective partners across 7+ countries." },
       { "id": "partnerships", "title": "Strategic Partnerships", "body": "Move from transactional outreach to long-term alliances with industry, academia, and government." },
       { "id": "standards", "title": "Standards Guidance", "body": "Direct access to working groups, frameworks, and advisory services that shape your standards journey." },
       { "id": "networking", "title": "Industry Networking", "body": "Closed-door forums, committee tables, and curated convenings across sectors and regions." },
@@ -1064,6 +1101,9 @@
       { "title": "Global Consortium", "links": ["Governments", "Industries", "Academia", "NGOs", "Development Partners"] },
       { "title": "News & Contact", "links": ["News & Publications", "Insights", "Events", "Press Room", "Contact"] }
     ],
-    "legalLinks": ["Privacy Notice", "Terms of Use", "Code of Conduct", "Accessibility"]
+    "legalLinks": ["Privacy Notice", "Terms of Use", "Code of Conduct", "Accessibility"],
+    "developedByPrefix": "Developed by",
+    "developedByLabel": "gleemy.dev",
+    "developedByHref": "https://gleemy.dev"
   }
 }
